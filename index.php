@@ -14,8 +14,6 @@
             <label>Password:</label><br>
             <input type="password" id="txtpassword"><br>
             <input type="button" value="Enviar" id="btnInicioSession">
-            
-            
         </form>
         
         
