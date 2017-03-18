@@ -1,5 +1,7 @@
 # proyectoCarrito2
-Proyecto carrito
+Proyecto carrrito
 
 
-Maruri esta agregado al repositorio
+
+
+Pagina para consultar el index https://tm-shopify027-furniture.myshopify.com/

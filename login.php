@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Login</title>
-        
+
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="gestionesjs/Usuarios.js"></script>
     </head>
@@ -15,10 +15,10 @@
             <input type="password" id="txtpassword"><br>
             <input type="button" value="Enviar" id="btnInicioSession">
         </form>
-        
-        
+
+
         <?php
-        
+
         ?>
     </body>
 </html>
