@@ -1,4 +1,4 @@
 # proyectoCarrito2
 Proyecto carrito
-ljkhkjghkhkjhkljhkljhkjhkjh
-kgkjh
+
+Bienvenido a git en este archivo se pondran solo comentarios
