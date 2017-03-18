@@ -1,4 +1,5 @@
 # proyectoCarrito2
 Proyecto carrito
-ljkhkjghkhkjhkljhkljhkjhkjh
-kgkjh
+
+
+Maruri esta agregado al repositorio
