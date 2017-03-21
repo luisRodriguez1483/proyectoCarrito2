@@ -42,7 +42,7 @@ $(document).on('click','#btnImgAgregarUsu',function (){
         resizable: "false",
         my: "center",
         at: "center",
-        of: "window",
+        of: window,
         modal: "true"
         });
             
@@ -59,7 +59,6 @@ $(document).on('click','#update',function (){
                 url: "./formularios/form_actualizar_usu.php",
                 data: {id:id},
                 success: function (data) {
-                    
              $('#modal').dialog({
         title: "Gestion de Usuarios",
         width: 550,
@@ -69,7 +68,7 @@ $(document).on('click','#update',function (){
         resizable: "false",
         my: "center",
         at: "center",
-        of: "window",
+        of: window,
         modal: "true"
         });
             

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title></title>
         
-        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/jquery-3.2.0.js" type="text/javascript"></script>
         <script src="js/jquery-ui.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="js/jquery.dataTables.css" media="screen"/>
