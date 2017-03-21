@@ -5,8 +5,8 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/styleindex.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -23,12 +23,12 @@
     </ul>
     <header class="menu">
         <ul>
-            <li class="col-1"><a href="">Nuevo</a></li>
+            <li class="col-1"><a href="">Inicio</a></li>
             <li class="col-2"><a href="">Destacados</a></li>
             <li class="col-2"><a href="">Más vendidos</a></li>
             <li class="col-1"><a href="">Ofertas</a></li>
             <li class="col-2"><a href="">Comentarios</a></li>
-            <li class="col-2"><a href="">Contacto</a></li>
+            <li class="col-2"><a href="contacto.php">Contacto</a></li>
             <li class="col-2"><input type="text" name="buscador" value="" placeholder="Buscar:"></li>
         </ul>
     </header>
@@ -58,7 +58,7 @@
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 
-    <nav class="categorias col-3 col-m-6">
+    <nav class="categorias col-3 col-m-4">
         <ul>
             <li><a href="">Categoría 1</a></li>
             <li><a href="">Categoría 2</a></li>
