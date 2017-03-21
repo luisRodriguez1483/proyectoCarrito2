@@ -7,3 +7,4 @@ Como podrán ver hice una parte del diseño del index, es adaptable y podrán co
 
 Añadi el formulario de contacto y una carpeta que se llama fonts junto con sus estilos que es la que hace funcionar los iconitos.
 
+Agregue los iconos a la parte del menú
