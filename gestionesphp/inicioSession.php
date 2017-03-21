@@ -23,7 +23,7 @@ try {
             if($status == "Activo"){
                 session_start();
                 
-                $_SESSION['idUsuario'] = $tipo;
+                //$_SESSION['idUsuario'] = $tipo;
                 
                 
                 

@@ -42,7 +42,7 @@ $(document).on('click','#btnImgAgregarUsu',function (){
         resizable: "false",
         my: "center",
         at: "center",
-        of: window,
+        of: "window",
         modal: "true"
         });
             
@@ -69,7 +69,7 @@ $(document).on('click','#update',function (){
         resizable: "false",
         my: "center",
         at: "center",
-        of: window,
+        of: "window",
         modal: "true"
         });
             

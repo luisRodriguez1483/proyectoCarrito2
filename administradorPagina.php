@@ -5,8 +5,10 @@
         <title></title>
         
         <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="js/jquery.dataTables.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui.css"/>
         <link rel="stylesheet"  href="css/style.css" type="text/css"/>
                <script src="gestionesjs/Administracion.js" type="text/javascript"></script>
         <script src="gestionesjs/Usuarios.js" type="text/javascript"></script>
