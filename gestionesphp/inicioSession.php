@@ -6,7 +6,7 @@ $pass = $_POST['pass'];
 
 try {
     
-    $query = "SELECT Password,Status,Tipo,idUsuario FROM tusuarios WHERE Usuario=:usuario";
+    $query = "SELECT Usuario,Password,Status,Tipo,idUsuario FROM tusuarios WHERE Usuario=:usuario";
     $sql = $conexion->prepare($query);
    $sql->execute(array(':usuario'=>$usuario));
     $numeroFilas = $sql->rowCount();
@@ -18,16 +18,16 @@ try {
         $status  = $row['Status'];
         $tipo = $row['Tipo'];
         $id = $row['idUsuario'];
+        $usuario = $row['Usuario'];
     }
     if($pass == $password){  
             if($status == "Activo"){
                 session_start();
                 
-                //$_SESSION['idUsuario'] = $tipo;
-                
-                
-                
-                
+            $_SESSION['Tipo'] = $tipo;
+            $_SESSION['usuario'] = $usuario;
+
+                echo 4;
             }else {
                 echo 3;
             }

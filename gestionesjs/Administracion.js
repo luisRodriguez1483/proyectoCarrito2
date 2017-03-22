@@ -21,7 +21,7 @@ $(document).on('click','#usuario',function (){
                  "lengthMenu": "_MENU_ Datos por pagina",
                 "zeroRecords": "No hay ningun dato que mostrar",
                 "info": "Pagina _PAGE_ de _PAGES_",
-                "infoFiltered": "(filtered from _MAX_ total records)"
+                "infoFiltered": "(Total de datos: _MAX_)"
                 }
     });
         }
@@ -37,7 +37,7 @@ $(document).on('click','#btnImgAgregarUsu',function (){
         title: "Gestion de Usuarios",
         width: 550,
         height: 400,
-        show: "blind",
+        show: "fold",
         hide: "scale",
         resizable: "false",
         my: "center",
@@ -63,7 +63,7 @@ $(document).on('click','#update',function (){
         title: "Gestion de Usuarios",
         width: 550,
         height: 400,
-        show: "blind",
+        show: "fold",
         hide: "scale",
         resizable: "false",
         my: "center",
@@ -74,9 +74,12 @@ $(document).on('click','#update',function (){
             
           $('#modal').html(data); 
         }
-                
-      
             });
 });
 
+$(document).on('click','#salir',function(){
+   $.ajax({
+       url
+   });
+});
 
