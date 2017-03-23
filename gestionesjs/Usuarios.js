@@ -1,8 +1,9 @@
 
 $(document).on('click','#btnInicioSession',function (){
+
+    
     var usuario = $('#txtusuario').val();
     var pass = $('#txtpassword').val();
-    
     $.ajax({
         type: 'POST',
         url: "./gestionesphp/inicioSession.php",
@@ -49,8 +50,6 @@ $(document).on('click','#btnRegUsuario',function (){
 });
 
 $(document).on('click','#btnActUsuario',function () {
-    
-    
     var respuesta = confirm("Esta seguro que desea continuar");
     if(respuesta == 1){
     
@@ -81,8 +80,6 @@ $(document).on('click','#btnActUsuario',function () {
 
 $(document).on('click','#remove',function (){
     var id = $(this).parents("tr").find("td").eq(0).html();
-    
-    
     var confirmacion = confirm("Esta seguro que desea eliminar");
     if (confirmacion == 1) {
          $.ajax({
@@ -96,14 +93,7 @@ $(document).on('click','#remove',function (){
                 }else{
                     alert(bnd);
                 }
-                
-                
             }
-        
    });
     }
-   
-  
-   
-   
 });
