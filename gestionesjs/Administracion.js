@@ -18,10 +18,17 @@ $(document).on('click','#usuario',function (){
                 "bInfo": true,
                 "bAutoWidth": true,
                 "language":{
+                    "sSearch":"Buscar",
                  "lengthMenu": "_MENU_ Datos por pagina",
                 "zeroRecords": "No hay ningun dato que mostrar",
                 "info": "Pagina _PAGE_ de _PAGES_",
-                "infoFiltered": "(Total de datos: _MAX_)"
+                "infoFiltered": "(Total de datos: _MAX_)",
+                "oPaginate":{
+                   "sFirst":"Primero",
+                    "sLast":"Ultimo",
+                    "sNext":"Siguiente",
+                    "sPrevious":"Anterior",
+                }
                 }
     });
         }

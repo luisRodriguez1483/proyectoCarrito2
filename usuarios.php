@@ -11,8 +11,8 @@
     <body>
         <table style="font-family: Arial"> 
            <tr>
-                <td><img  src="images/agregar.png" id="btnImgAgregarUsu" style="width: 30px;"/></td> 
-                <td>Agregar....</td>
+                <td class="filaAgregar"><img  src="images/agregar.png" id="btnImgAgregarUsu" style="width: 30px;"/></td>
+                <td class="filaAgregar">Agregar....</td>
            </tr>
         </table>
    

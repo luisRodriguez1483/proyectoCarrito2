@@ -63,7 +63,7 @@ p:hover{
     margin-top: 23%;
     height: 30%;
     width: 65%;
-    font-size: 25px;
+    font-size: 15px;
 }
 #btnAgregar:hover{
     cursor: pointer;
@@ -77,3 +77,6 @@ h1{
     margin-top: 150px;
 }
 
+filaAgregar:hover{
+    cursor:pointer;
+}
