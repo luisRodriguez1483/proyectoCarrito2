@@ -8,12 +8,23 @@ html {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: ghostwhite;
+    width: 100%;
+}
+
 .furniture {
     font-size: 24px;
 }
 
 .furniture b {
     color: limegreen;
+}
+
+.contenedor {
+    margin-left: 8.33%;
+    margin-right: 8.33%;
+    background-color: white;
 }
 
 
@@ -33,10 +44,6 @@ html {
 .cabecera li a {
     display: inline-block;
     text-align: center;
-    text-decoration: none;
-}
-
-.cabecera li a:link {
     text-decoration: none;
 }
 
@@ -174,6 +181,7 @@ html {
 
 .categorias {
     height: auto;
+    width: auto;
 }
 
 .categorias ul {
@@ -223,7 +231,7 @@ html {
 }
 
 .formulario input {
-    width: 250px;
+    width: 200px;
     border-radius: 8px;
     height: 35px;
     font-family: Arial, Helvetica, sans-serif;
@@ -231,11 +239,38 @@ html {
 }
 
 .formulario textarea {
-    width: 250px;
+    width: 90%;
     max-width: 250px;
     border-radius: 8px;
     height: 250px;
     max-height: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+
+/*Estilos para inicio de sesión*/
+
+.inicio {
+    text-align: center;
+}
+
+.inicio h1 {
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 80px;
+    color: mediumseagreen;
+}
+
+.inicio label {
+    padding-left: 10px;
+    font-size: 24px;
+}
+
+.inicio input {
+    width: 200px;
+    border-radius: 8px;
+    height: 35px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
@@ -248,6 +283,26 @@ html {
     background-color: lightseagreen;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.submit:hover {
+    cursor: pointer;
+    background-color: mediumseagreen;
+}
+
+.span {
+    padding: 5px;
+}
+
+
+/*Estilos para productos*/
+
+.catprod {}
+
+.productos {
+    height: auto;
+    width: auto;
+    float: right;
 }
 
 

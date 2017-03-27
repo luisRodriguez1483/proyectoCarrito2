@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title></title>
+    <title>Inicio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,6 +11,7 @@
 </head>
 
 <body>
+<div class="contenedor">
     <p class="furniture">furniture<b>store</b></p>
     <ul class="cabecera">
         <li class="col-2">
@@ -36,19 +37,19 @@
     <div class="slideshow-container">
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="images/img1.jpg" alt="" style="width: 100%">
+            <img src="images/img1.png" alt="" style="width:100%;">
             <div class="text">Imagén Uno</div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img src="images/img2.jpg" alt="" style="width: 100%">
+            <img src="images/img2.png" alt="" style="width:100%;">
             <div class="text">Imagén Dos</div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img src="images/img3.jpg" alt="" style="width: 100%">
+            <img src="images/img3.png" alt="" style="width:100%;">
             <div class="text">Imagén Tres</div>
         </div>
     </div>
@@ -57,17 +58,17 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-
-    <nav class="categorias col-3 col-m-4">
+    </div>  
+        <nav class="categorias col-3 col-m-4">
         <ul>
             <li><a href="">Categoría 1</a></li>
             <li><a href="">Categoría 2</a></li>
-            <li><a href="">Categoría 3</a></li>
+            <li ><a href="">Categoría 3</a></li>
             <li><a href="">Categoría 4</a></li>
             <li><a href="">Categoría 5</a></li>
         </ul>
     </nav>
+    </div> 
 </body>
 <script type="text/javascript">
     var slideIndex = 0;

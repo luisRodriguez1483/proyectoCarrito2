@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/styleindex.css" rel="stylesheet">
     <link rel="stylesheet" href="fonts/style.css">
-    <title>Document</title>
+    <title>Contactanos</title>
 </head>
 <body>
+<div class="contenedor">
     <p class="furniture">furniture<b>store</b></p>
     <ul class="cabecera">
         <li class="col-2">
@@ -17,7 +18,7 @@
         <li class="col-2 col-m-12"><a href="">Envíos y Devoluciones</a></li>
         <li class="col-2 col-m-12"><a href="">Búsqueda Avanzada</a></li>
         <li class="col-2 col-m-12"><a href="">Crear una Cuenta</a></li>
-        <li class="col-2 col-m-12"><a href="">Iniciar sesión</a></li>
+        <li class="col-2 col-m-12"><a href="login.php">Iniciar sesión</a></li>
         <li class="carrito col-2 col-m-12"><a href="">Carrito:</a></li>
     </ul>
     <header class="menu">
@@ -43,5 +44,6 @@
         <input type="submit" name="btnCorreo" value="Enviar Correo" class="submit">
         </form>
     </article>
+    </div>
 </body>
 </html>
