@@ -57,6 +57,11 @@
                 </li>
 
 <?php } ?>
+
+                <li>
+                    <div class="barra"></div>
+                    <p id="slider">Slider</p>
+                </li>
                 <li>
                     <div class="barra"></div>
                     <p id="salir">Salir</p>
