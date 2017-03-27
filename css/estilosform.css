@@ -1,0 +1,52 @@
+ form{
+ 	width: 35%;
+ 	border: 1px solid #ccc;
+ 	margin: 15px;
+ 	padding: 15px;
+ }
+
+ label{
+ 	font-size: 12px;
+ 	display: block;
+ 	width: 100%;
+ }
+
+input, select{
+	margin-bottom: 15px;
+	width: 100%;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+}
+
+input:focus, select:focus{
+	border: 1px solid #1668C4;
+}
+
+input[type="submit"]{
+	background-color: #90DDD2;
+	width: 40%;
+	margin-top: 30px;
+	padding: 5px;
+	box-shadow: 0px 0px 3px #136C60 inset;
+	transition: all ease 0.5;
+	alignment-adjust:
+}
+
+input[type="submit"]:hover{
+	transform: scale(1.2);
+	cursor: pointer;
+	box-shadow: 0px 5px 0px hls(171,54%,42%), 0px 10px 10px #000, 0px 0px 3px #136C60 inset;
+	border-radius: 3px;
+}
+
+input[type="submit"]:active{
+	transform:scale(1.2) translateY(3px);
+	box-shadow: 0px 3px 0px hls(171, 53%, 42%), 0px 5px 5px #000, 0px 0px 3px #136C60 inset;
+}
+
+div{
+
+}
