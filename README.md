@@ -10,3 +10,5 @@ Añadi el formulario de contacto y una carpeta que se llama fonts junto con sus 
 Agregue los iconos a la parte del menú
 
 Hola perros en realidad no es ningpun cambios, es más bien Git en Lunix :).
+
+Cambios en el formulario de clientes
