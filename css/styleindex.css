@@ -79,6 +79,9 @@ body {
     padding-bottom: 14px;
     text-decoration: none;
     width: 100%;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: none;
 }
 
 .menu li a:hover {
@@ -177,42 +180,6 @@ body {
 }
 
 
-/*Estilos categorias*/
-
-.categorias {
-    height: auto;
-    width: auto;
-    float: left;
-}
-
-.categorias ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.categorias li {
-    border: 1px solid darkslateblue;
-    border-radius: 10px;
-    background-color: lightslategrey
-}
-
-.categorias li a {
-    display: inline-block;
-    color: whitesmoke;
-    text-align: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    text-decoration: none;
-    width: 100%;
-}
-
-.categorias li a:hover {
-    background-color: grey;
-}
-
-
 /*Estilos para formulario de contacto*/
 
 .formulario {
@@ -296,6 +263,42 @@ body {
 }
 
 
+/*Estilos categorias*/
+
+.categorias {
+    height: auto;
+    width: auto;
+    float: left;
+}
+
+.categorias ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.categorias li {
+    border: 1px solid darkslateblue;
+    border-radius: 10px;
+    background-color: lightslategrey
+}
+
+.categorias li a {
+    display: inline-block;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.categorias li a:hover {
+    background-color: grey;
+}
+
+
 /*Estilos para productos*/
 
 .catprod {
@@ -332,6 +335,40 @@ body {
 .imagen6 img {
     border: 3px solid lightgreen;
     width: 75%;
+}
+
+.paginacion {
+    float: right;
+}
+
+.paginacion a {
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: none;
+    color: seagreen;
+    background-color: lightgreen;
+    border-radius: 8px;
+    font-size: 24px;
+}
+
+.paginacion span {
+    color: green;
+}
+
+
+/*Estilos para foto.php*/
+
+.foto img {
+    width: 35%;
+}
+
+.foto a {
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: none;
+    color: seagreen;
+    border-radius: 8px;
+    font-size: 24px;
 }
 
 

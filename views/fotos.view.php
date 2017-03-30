@@ -32,16 +32,13 @@
         </ul>
     </header>
     <article class="formulario">
-        <h1>Formulario de Contacto</h1>
-        <form action="" methood="POST">
-        <span class="icon-at2 mail"><label for="correo">E-mail:</label></span>
-        <input type="text" name="correo" placeholder"Aqui va tu correo electrónico" /><br><br><br>
-        <span class="icon-comment3 mail"><label for="asunto">Asunto:</label></span>
-        <input type="text" name="asunto" placeholder"Asunto" /><br><br><br>
-        <span class="icon-envelop mail"><label for="mensaje">Mensaje:</label></span><br>
-        <textarea rows="" cols=""></textarea><br><br><br>
-        <input type="submit" name="btnCorreo" value="Enviar Correo" class="submit">
-        </form>
+        <h1>Foto: 1.jpg</h1>
+        <div class="foto">
+            <img src="images/1.jpg" alt=""><br>
+            <p><b>Descripción:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia pariatur maxime, facere? Incidunt quam, iure sapiente voluptatem magni tempore deserunt fugit sequi vitae rem, facilis ipsum delectus fugiat, nam maiores.</p>
+            <input type="submit" value="Comprar"><br>
+            <a href="index.php"><span class="icon-arrow-left-alt1"></span> Regresar</a>
+        </div>
     </article>
     </div>
 </body>

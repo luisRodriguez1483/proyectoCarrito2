@@ -101,10 +101,15 @@
         Playa<br><input type="submit" value="Comprar"></div>
         <div class="imagen4 col-4 col-m-6"><img src="images/16.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
         Plantas<br><input type="submit" value="Comprar"></div>
-
-
     </article>
+    <div class="paginacion imagenes">
+        <a href="#" class="izquierda col-6 col-m-6"><span class="icon-arrow-left-alt1"></span> Página Anterior</a>
+        <a href="#" class="derecha col-6 col-m-6">Página Siguiente <span class="icon-arrow-right-alt1"></span></a>
+        </div>
     </div>
+    <footer>
+        <h1>FOOTER</h1>
+    </footer>
     </div> 
 </body>
 <script type="text/javascript">
