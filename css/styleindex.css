@@ -182,6 +182,7 @@ body {
 .categorias {
     height: auto;
     width: auto;
+    float: left;
 }
 
 .categorias ul {
@@ -297,12 +298,40 @@ body {
 
 /*Estilos para productos*/
 
-.catprod {}
+.catprod {
+    overflow: hidden;
+}
 
-.productos {
+.imagenes {
+    float: left;
+    border: none;
     height: auto;
-    width: auto;
-    float: right;
+    overflow: hidden;
+}
+
+.imagen1,
+.imagen2,
+.imagen3,
+.imagen4,
+.imagen5,
+.imagen6 {
+    float: left;
+    align-content: center;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    height: auto;
+    white-space: pre-line;
+}
+
+.imagen1 img,
+.imagen2 img,
+.imagen3 img,
+.imagen4 img,
+.imagen5 img,
+.imagen6 img {
+    border: 3px solid lightgreen;
+    width: 75%;
 }
 
 

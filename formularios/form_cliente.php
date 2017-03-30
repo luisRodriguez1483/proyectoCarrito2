@@ -23,7 +23,7 @@
         </li>
         <li class="col-2 col-m-12"><a href="">Envíos y Devoluciones</a></li>
         <li class="col-2 col-m-12"><a href="">Búsqueda Avanzada</a></li>
-        <li class="col-2 col-m-12"><a href="">Crear una Cuenta</a></li>
+        <li class="col-2 col-m-12"><a href="form_cliente.php">Crear una Cuenta</a></li>
         <li class="col-2 col-m-12"><a href="../login.php">Iniciar sesión</a></li>
         <li class="carrito col-2 col-m-12"><a href="">Carrito:</a></li>
     </ul>

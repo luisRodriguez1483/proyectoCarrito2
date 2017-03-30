@@ -19,19 +19,18 @@
         </li>
         <li class="col-2 col-m-12"><a href="">Envíos y Devoluciones</a></li>
         <li class="col-2 col-m-12"><a href="">Búsqueda Avanzada</a></li>
-        <li class="col-2 col-m-12"><a href="">Crear una Cuenta</a></li>
+        <li class="col-2 col-m-12"><a href="formularios/form_cliente.php">Crear una Cuenta</a></li>
         <li class="col-2 col-m-12"><a href="login.php">Iniciar sesión</a></li>
         <li class="carrito col-2 col-m-12"><a href="">Carrito:</a></li>
     </ul>
     <header class="menu">
         <ul>
-            <li class="col-1"><a href="index.php"><span class="icon-home4">Inicio</span></a></li>
+            <li class="col-2"><a href="index.php"><span class="icon-home4">Inicio</span></a></li>
             <li class="col-2"><a href=""><span class="icon-star2">Destacados</span></a></li>
             <li class="col-2"><a href=""><span class="icon-trophy3">Más vendidos</span></a></li>
-            <li class="col-1"><a href=""><span class="icon-price-tag">Ofertas</span></a></li>
+            <li class="col-2"><a href=""><span class="icon-price-tag">Ofertas</span></a></li>
             <li class="col-2"><a href=""><span class="icon-comment-alt2-fill">Comentarios</span></a></li>
             <li class="col-2"><a href="contacto.php"><span class="icon-mail5">Contacto</span></a></li>
-            <li class="col-2"><input type="text" name="buscador" value="" placeholder="Buscar:"></li>
         </ul>
     </header>
     <div class="slideshow-container">
@@ -58,7 +57,8 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-    </div>  
+    </div>
+    <div class="catprod">
         <nav class="categorias col-3 col-m-4">
         <ul>
             <li><a href="">Categoría 1</a></li>
@@ -67,7 +67,44 @@
             <li><a href="">Categoría 4</a></li>
             <li><a href="">Categoría 5</a></li>
         </ul>
-    </nav>
+    </nav> 
+    <article class="imagenes col-9 col-m-8">
+        <div class="imagen1 col-4 col-m-6"><img src="images/1.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        MacBook Pro<br><input type="submit" value="Comprar" class="comprar"></div>
+        <div class="imagen2 col-4 col-m-6"><img src="images/2.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Puente colgante<br><input type="submit" value="Comprar"></div>
+        <div class="imagen3 col-4 col-m-6"><img src="images/3.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        MacBook Air<br><input type="submit" value="Comprar"></div>
+        <div class="imagen4 col-4 col-m-6"><img src="images/4.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Rascacielos<br><input type="submit" value="Comprar"></div>
+        <div class="imagen5 col-4 col-m-6"><img src="images/5.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Cámara fotográfica<br><input type="submit" value="Comprar"></div>
+        <div class="imagen6 col-4 col-m-6"><img src="images/6.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Globo aerostático<br><input type="submit" value="Comprar"></div>
+        <div class="imagen1 col-4 col-m-6"><img src="images/7.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Laptop<br><input type="submit" value="Comprar"></div>
+        <div class="imagen2 col-4 col-m-6"><img src="images/8.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Paisaje<br><input type="submit" value="Comprar"></div>
+        <div class="imagen3 col-4 col-m-6"><img src="images/9.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Uniforme<br><input type="submit" value="Comprar"></div>
+        <div class="imagen4 col-4 col-m-6"><img src="images/10.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Cielo<br><input type="submit" value="Comprar"></div>
+        <div class="imagen5 col-4 col-m-6"><img src="images/11.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Bocinas<br><input type="submit" value="Comprar"></div>
+        <div class="imagen6 col-4 col-m-6"><img src="images/12.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Palmeras<br><input type="submit" value="Comprar"></div>
+        <div class="imagen1 col-4 col-m-6"><img src="images/13.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Agua<br><input type="submit" value="Comprar"></div>
+        <div class="imagen2 col-4 col-m-6"><img src="images/14.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Ruinas<br><input type="submit" value="Comprar"></div>
+        <div class="imagen3 col-4 col-m-6"><img src="images/15.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Playa<br><input type="submit" value="Comprar"></div>
+        <div class="imagen4 col-4 col-m-6"><img src="images/16.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
+        Plantas<br><input type="submit" value="Comprar"></div>
+
+
+    </article>
+    </div>
     </div> 
 </body>
 <script type="text/javascript">
@@ -90,7 +127,7 @@
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
     }
 </script>
 
