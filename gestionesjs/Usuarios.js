@@ -25,6 +25,17 @@ $(document).on('click','#btnIngresar',function (){
     });
 });
 
+$(document).on('click','#btnSalir',function(){
+$.ajax({
+    type:"POST",
+    url:"./logout.php",
+    data:{},
+    success:function(data){
+            location.href="./index.php"
+    }
+});
+
+});
 
 
 $(document).on('click','#btnRegUsuario',function (){

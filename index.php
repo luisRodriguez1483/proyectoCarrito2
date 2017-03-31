@@ -1,5 +1,11 @@
 <?php
+session_start();
+if(empty($_SESSION['idUsuario']) && empty($_SESSION['Tipo'])){
+include 'views/index.view.php';
+}else{
 
-require 'views/index.view.php';
+header("Location:index.php");
+}
+
 
 ?>

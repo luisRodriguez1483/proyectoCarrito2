@@ -83,10 +83,3 @@ $(document).on('click','#update',function (){
         }
             });
 });
-
-$(document).on('click','#salir',function(){
-   $.ajax({
-       url
-   });
-});
-

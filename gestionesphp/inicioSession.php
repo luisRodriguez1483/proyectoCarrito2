@@ -23,10 +23,8 @@ try {
     if($pass == $password){  
             if($status == "Activo"){
                 session_start();
-                
-            $_SESSION['Tipo'] = $tipo;
-            $_SESSION['usuario'] = $usuario;
-
+                $_SESSION['idUsuario'] = $id;
+                $_SESSION['Tipo'] = $tipo;
                 echo 4;
             }else {
                 echo 3;

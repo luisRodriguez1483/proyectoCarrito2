@@ -14,7 +14,7 @@
                             <option value="Administrador">Administrador</option>
                             <option value="Secretaria">Secretaria</option>
                 	</select>
-                </div>      
+                </div>
                 <div>
               		<label class="formulario">Status: </label>
                         <select id="cmbStatus">
@@ -26,6 +26,5 @@
                 <div>
                     <input type="button" value="Enviar" id="btnRegUsuario" /></a>
                 </div>
-                 
+
      </form>
-    

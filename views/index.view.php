@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Inicio</title>
     <meta charset="UTF-8">
