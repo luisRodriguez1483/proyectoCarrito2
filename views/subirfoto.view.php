@@ -35,20 +35,19 @@
         <h1>Registrar Producto</h1>
         <div class="subir">
             <form method="POST" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-                <label for="producto">Nombre del producto:</label>
+                <label for="producto">Nombre de la imagén:</label>
                 <input type="text" name="producto" id="producto"><br><br>
-                <label for="descripcion">Descripcion:</label>
-                <input type="text" name="descripcion" id="descripcion"><br><br>
-                <label for="foto">Selecciona la foto</label>
-                <input type="file" name="foto" id="foto"><br><br>
-                <label for="categoria">Categoria</label>
-                <select>
-                    <option value="" name="categoria" id="categoria">---Selecciona una categoría---</option>
-                </select><br><br>
-                <label for="">Proveedor</label>
-                <select>
-                    <option value="" name="proveedor" id="proveedor">---Selecciona un proveedor---</option>
-                </select>
+                <label for="imagen">Imagén:</label>
+                <input type="file" name="foto" id="imagen"><br><br>
+                <label for="descripcion">Descripción:</label>
+                <textarea name="descripcion" id="descripcion">
+    
+                
+                </textarea>
+                <?php if(isset($error)): ?>
+                <p class="error"><?php echo $error; ?></p>
+                <?php endif ?>
+                <input type="submit" value="Registrar" onclick="miFuncion();">
             </form>
         </div>
     </article>

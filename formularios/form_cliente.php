@@ -29,12 +29,12 @@
     </ul>
 	<header class="menu">
         <ul>
-            <li class="col-2"><a href="index.php"><span class="icon-home4">Inicio</span></a></li>
+            <li class="col-2"><a href="../index.php"><span class="icon-home4">Inicio</span></a></li>
             <li class="col-2"><a href=""><span class="icon-star2">Destacados</span></a></li>
             <li class="col-2"><a href=""><span class="icon-trophy3">Más vendidos</span></a></li>
             <li class="col-2"><a href=""><span class="icon-price-tag">Ofertas</span></a></li>
             <li class="col-2"><a href=""><span class="icon-comment-alt2-fill">Comentarios</span></a></li>
-            <li class="col-2"><a href="contacto.php"><span class="icon-mail5">Contacto</span></a></li>
+            <li class="col-2"><a href="../contacto.php"><span class="icon-mail5">Contacto</span></a></li>
         </ul>
     </header>
 	<article class="formulario">
