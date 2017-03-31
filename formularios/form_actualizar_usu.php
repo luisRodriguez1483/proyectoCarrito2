@@ -1,3 +1,9 @@
+
+<html>
+<head>
+<link rel="stylesheet" href="../css/estilosform.css">
+</head>
+<body>
 <?php
 
 include '../conexion.php';
@@ -66,5 +72,7 @@ try {
 } catch (Exception $exc) {
     echo "ERROR DE CONSULTA ".$exc->getMessage();
 }
-        
-        
+    ?>
+
+    </body>
+ </html>

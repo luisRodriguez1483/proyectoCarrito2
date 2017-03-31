@@ -1,5 +1,5 @@
 
-$(document).on('click','#btnInicioSession',function (){
+$(document).on('click','#btnIngresar',function (){
 
     
     var usuario = $('#txtusuario').val();

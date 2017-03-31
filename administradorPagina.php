@@ -10,6 +10,7 @@
         <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"/>
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
         <link rel="stylesheet"  href="css/style.css" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="estilosform.css"/>
         <script src="gestionesjs/Administracion.js" type="text/javascript"></script>
         <script src="gestionesjs/Usuarios.js" type="text/javascript"></script>
           

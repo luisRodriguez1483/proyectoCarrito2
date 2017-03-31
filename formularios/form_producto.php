@@ -4,7 +4,7 @@
 <title>Formulario Producto</title>
 <script src="jquery-3.1.1.min.js"></script>
 <script src="combosdinamicos.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="estilosform.css"/>
+
 </head>
 
 <body>
