@@ -12,3 +12,5 @@ Agregue los iconos a la parte del menú
 Hola perros en realidad no es ningpun cambios, es más bien Git en Lunix :).
 
 Cambios en el formulario de clientes
+
+Galeria del index (aún no es dinámica) y pequeño cambio en el menú

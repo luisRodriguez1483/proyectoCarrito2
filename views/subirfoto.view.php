@@ -32,16 +32,25 @@
         </ul>
     </header>
     <article class="formulario">
-        <h1>Formulario de Contacto</h1>
-        <form action="" methood="POST">
-        <span class="icon-at2 mail"><label for="correo">E-mail:</label></span>
-        <input type="text" name="correo" placeholder"Aqui va tu correo electrónico" /><br><br><br>
-        <span class="icon-comment3 mail"><label for="asunto">Asunto:</label></span>
-        <input type="text" name="asunto" placeholder"Asunto" /><br><br><br>
-        <span class="icon-envelop mail"><label for="mensaje">Mensaje:</label></span><br>
-        <textarea rows="" cols=""></textarea><br><br><br>
-        <input type="submit" name="btnCorreo" value="Enviar Correo" class="submit">
-        </form>
+        <h1>Registrar Producto</h1>
+        <div class="subir">
+            <form method="POST" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+                <label for="producto">Nombre del producto:</label>
+                <input type="text" name="producto" id="producto"><br><br>
+                <label for="descripcion">Descripcion:</label>
+                <input type="text" name="descripcion" id="descripcion"><br><br>
+                <label for="foto">Selecciona la foto</label>
+                <input type="file" name="foto" id="foto"><br><br>
+                <label for="categoria">Categoria</label>
+                <select>
+                    <option value="" name="categoria" id="categoria">---Selecciona una categoría---</option>
+                </select><br><br>
+                <label for="">Proveedor</label>
+                <select>
+                    <option value="" name="proveedor" id="proveedor">---Selecciona un proveedor---</option>
+                </select>
+            </form>
+        </div>
     </article>
     </div>
 </body>
