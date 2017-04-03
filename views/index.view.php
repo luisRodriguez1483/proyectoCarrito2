@@ -1,3 +1,34 @@
+<?php
+
+ $fotos_por_pagina = 16;
+
+    $pagina_actual = (isset($_GET['p']) ? (int)$_GET['p'] : 1);
+    $inicio = ($pagina_actual > 1) ? $pagina_actual * $fotos_por_pagina - $fotos_por_pagina : 0;
+
+    $conexion = conexion('proyecto', 'root', '');
+
+    if (!$conexion) {
+        die();
+    }
+
+    $statement = $conexion->prepare("
+        SELECT SQL_CALC_FOUND_ROWS * FROM timagen LIMIT $inicio, $fotos_por_pagina
+    ");
+
+    $statement->execute();
+    $fotos = $statement->fetchAll();
+
+    if (!$fotos) {
+        header('Location: index.php');
+    }
+
+    $statement = $conexion->prepare("SELECT FOUND_ROWS() as total_filas");
+    $statement->execute();
+    $total_post = $statement->fetch()['total_filas'];
+
+    $total_paginas = ceil($total_post / $fotos_por_pagina);
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,38 +100,16 @@
         </ul>
     </nav> 
     <article class="imagenes col-9 col-m-8">
-        <div class="imagen1 col-4 col-m-6"><img src="images/1.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        MacBook Pro<br><input type="submit" value="Comprar" class="comprar"></div>
-        <div class="imagen2 col-4 col-m-6"><img src="images/2.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Puente colgante<br><input type="submit" value="Comprar"></div>
-        <div class="imagen3 col-4 col-m-6"><img src="images/3.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        MacBook Air<br><input type="submit" value="Comprar"></div>
-        <div class="imagen4 col-4 col-m-6"><img src="images/4.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Rascacielos<br><input type="submit" value="Comprar"></div>
-        <div class="imagen5 col-4 col-m-6"><img src="images/5.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Cámara fotográfica<br><input type="submit" value="Comprar"></div>
-        <div class="imagen6 col-4 col-m-6"><img src="images/6.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Globo aerostático<br><input type="submit" value="Comprar"></div>
-        <div class="imagen1 col-4 col-m-6"><img src="images/7.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Laptop<br><input type="submit" value="Comprar"></div>
-        <div class="imagen2 col-4 col-m-6"><img src="images/8.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Paisaje<br><input type="submit" value="Comprar"></div>
-        <div class="imagen3 col-4 col-m-6"><img src="images/9.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Uniforme<br><input type="submit" value="Comprar"></div>
-        <div class="imagen4 col-4 col-m-6"><img src="images/10.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Cielo<br><input type="submit" value="Comprar"></div>
-        <div class="imagen5 col-4 col-m-6"><img src="images/11.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Bocinas<br><input type="submit" value="Comprar"></div>
-        <div class="imagen6 col-4 col-m-6"><img src="images/12.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Palmeras<br><input type="submit" value="Comprar"></div>
-        <div class="imagen1 col-4 col-m-6"><img src="images/13.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Agua<br><input type="submit" value="Comprar"></div>
-        <div class="imagen2 col-4 col-m-6"><img src="images/14.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Ruinas<br><input type="submit" value="Comprar"></div>
-        <div class="imagen3 col-4 col-m-6"><img src="images/15.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Playa<br><input type="submit" value="Comprar"></div>
-        <div class="imagen4 col-4 col-m-6"><img src="images/16.jpg" alt=""><br><b>Costo:</b>$ 24,550<br><b>Descripción:</b>
-        Plantas<br><input type="submit" value="Comprar"></div>
+        <?php foreach($fotos as $foto):?>
+        <div class="imagen1 col-4 col-m-6"> 
+            <p><?php echo "<h2>".$foto['Nombre']."</h2>"; ?></p>
+            <a href="fotos.php?id=<?php echo $foto['idImagen']; ?>">
+                <img src="images/bd/<?php echo $foto['Imagen'] ?>" alt="<?php echo $foto['Descripcion'] ?>">
+            </a>
+            <p><?php echo $foto['Descripcion']; ?></p>
+            </div>
+        <?php endforeach;?>
+        
     </article>
     <div class="paginacion imagenes">
         <a href="#" class="izquierda col-6 col-m-6"><span class="icon-arrow-left-alt1"></span> Página Anterior</a>

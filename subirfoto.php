@@ -1,6 +1,7 @@
 <?php
 
 require 'views/subirfoto.view.php';
+require 'conexion.php';
 
 $servername = "localhost";
 $username = "root";
@@ -21,13 +22,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && !empty($_FILES)){
         $archivo_subido=$carpeta_destino . $_FILES['foto']['name'];
         move_uploaded_file($_FILES['foto']['tmp_name'], $archivo_subido);
 
-        try{
-            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-            // set the PDO error mode to exception
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
             // prepare sql and bind parameters
-            $statement = $conn->prepare('INSERT INTO timagen (Nombre, Imagen, Descripcion) 
+            $statement = $conexion->prepare('INSERT INTO timagen (Nombre, Imagen, Descripcion) 
             VALUES (:Nombre, :Imagen, :Descripcion)');
             
             $statement->execute(array(
@@ -36,11 +32,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && !empty($_FILES)){
                 ':Descripcion' => $_POST['descripcion'],
             ));
 
-                header('Location: index.php');
+            header('Location: index.php');
 
-        }catch(PDOException $e){
-            echo "Error: " . $e->getMessage();
-            }
         }else{
                 $error="El archivo no es una imagen o el archivo es muy pesado";
             }
