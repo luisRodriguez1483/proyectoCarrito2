@@ -1,7 +1,7 @@
 
 <html>
 <head>
-<link rel="stylesheet" href="../css/estilosform.css">
+
 </head>
 <body>
 <?php

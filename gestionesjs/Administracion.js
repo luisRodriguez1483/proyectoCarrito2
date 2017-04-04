@@ -83,3 +83,15 @@ $(document).on('click','#update',function (){
         }
             });
 });
+
+
+$(document).on('click','#proveedores',function(){
+    $.ajax({
+        type:'POST',
+        dataType:'./proveedores.php',
+        async:false,
+        success:function(data){
+                $('#contenido').html(data);
+        }
+    });
+});

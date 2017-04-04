@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"/>
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
         <link rel="stylesheet"  href="css/style.css" type="text/css"/>
-        <link rel="stylesheet" type="text/css" href="./css/estilosform.css"/>
+        <link rel="stylesheet" type="text/css" href="css/estilosform.css"/>
         <script src="gestionesjs/administracion.js" type="text/javascript"></script>
         <script src="gestionesjs/Usuarios.js" type="text/javascript"></script>
           
@@ -39,7 +39,7 @@
                 </li>
                 <li>
                     <div class="barra"></div>
-                    <p>Proveedores</p>
+                    <p id="proveedores">Proveedores</p>
                 </li>
                 <li>
                     <div class="barra"></div>
@@ -54,7 +54,7 @@
             <?php }else {?>
 <li>
                     <div class="barra"></div>
-                    <p>Proveedores</p>
+                    <p id = "proveedores">Proveedores</p>
                 </li>
                 <li>
                     <div class="barra"></div>

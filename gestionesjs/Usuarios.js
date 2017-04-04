@@ -31,7 +31,7 @@ $.ajax({
     url:"./logout.php",
     data:{},
     success:function(data){
-            location.href="./index.php"
+           window.location.href="./index.php"
     }
 });
 
