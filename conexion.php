@@ -11,5 +11,14 @@
         } catch (PDOException $exc) {
             echo "ERROR DE CONEXION  ".$exc->getMessage();
         }
+
+        function conexion($bd, $usuario, $pass){
+	try {
+		$conexion = new PDO("mysql:host=localhost;dbname=$bd", $usuario, $pass);
+		return $conexion;
+	} catch (PDOException $e) {
+		return false;
+	}
+}
        
 

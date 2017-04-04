@@ -1,10 +1,13 @@
 <?php
+
+
 session_start();
 if(empty($_SESSION['idUsuario']) && empty($_SESSION['Tipo'])){
-include 'views/index.view.php';
+    include 'conexion.php';
+    include 'views/index.view.php';
 }else{
 
-header("Location:index.php");
+header("Location: formularios/form_cliente.php");
 }
 
 
