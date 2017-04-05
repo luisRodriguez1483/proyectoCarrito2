@@ -107,13 +107,18 @@
                 <img src="images/bd/<?php echo $foto['Imagen'] ?>" alt="<?php echo $foto['Descripcion'] ?>">
             </a>
             <p><?php echo $foto['Descripcion']; ?></p>
+            <input type="submit" value="Comprar">
             </div>
         <?php endforeach;?>
         
     </article>
     <div class="paginacion imagenes">
-        <a href="#" class="izquierda col-6 col-m-6"><span class="icon-arrow-left-alt1"></span> Página Anterior</a>
-        <a href="#" class="derecha col-6 col-m-6">Página Siguiente <span class="icon-arrow-right-alt1"></span></a>
+    <?php if($pagina_actual > 1): ?>
+        <a href="index.php?p=<?php echo $pagina_actual - 1; ?>" class="izquierda col-6 col-m-6"><span class="icon-arrow-left-alt1"></span> Página Anterior</a>
+    <?php endif ?>
+    <?php if($pagina_actual != $pagina_actual): ?>
+        <a href="index.php?p=<?php echo $pagina_actual + 1; ?>" class="derecha col-6 col-m-6">Página Siguiente <span class="icon-arrow-right-alt1"></span></a>
+    <?php endif ?>  
         </div>
     </div>
     <footer>
