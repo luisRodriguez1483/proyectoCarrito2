@@ -32,10 +32,16 @@
         </ul>
     </header>
     <article class="formulario">
-        <h1>Foto: 1.jpg</h1>
+        <h1>Foto: <?php if(!empty($foto['Nombre'])) {
+            echo $foto['Nombre'];
+        }else{
+            echo $foto['Imagen'];
+        }
+        ?>
+        </h1>
         <div class="foto">
-            <img src="images/1.jpg" alt=""><br>
-            <p><b>Descripción:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia pariatur maxime, facere? Incidunt quam, iure sapiente voluptatem magni tempore deserunt fugit sequi vitae rem, facilis ipsum delectus fugiat, nam maiores.</p>
+            <img src="images/bd/<?php echo $foto['Imagen']; ?>" alt=""><br>
+            <p><b>Descripción:</b> <?php echo $foto['Descripcion']; ?></p>
             <input type="submit" value="Comprar"><br>
             <a href="index.php"><span class="icon-arrow-left-alt1"></span> Regresar</a>
         </div>
