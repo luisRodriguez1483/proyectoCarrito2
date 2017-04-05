@@ -12,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="css/estilosform.css"/>
         <script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>
         <script src="gestionesjs/Usuarios.js" type="text/javascript"></script>
+        <script src="gestionesjs/Proveedores.js" type="text/javascript"></script>
           
     </head>
 

@@ -44,8 +44,8 @@
                         echo '<td>'.utf8_encode($row['contacto']).'</td>';
                         echo '<td>'.$row['telefono'].'</td>';
                         echo '<td>'.$row['correo'].'</td>';
-                       echo '<td><label  id="update"><img src="images/actualizar.png" style="width:22px"/> Editar</label></td>';
-                       echo '<td><label id="remove"><img src="images/eliminar.png" style="width:22px" /> Eliminar</label></td>';
+                       echo '<td><label  id="updateProveedor"><img src="images/actualizar.png" style="width:22px"/> Editar</label></td>';
+                       echo '<td><label id="removeProveedor"><img src="images/eliminar.png" style="width:22px" /> Eliminar</label></td>';
                         echo '</tr>';
                     }
 

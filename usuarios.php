@@ -40,11 +40,11 @@
                         echo '<tr>';
                         echo '<td style="display:none">'.$row['idUsuario'].'</td>'; 
                         echo '<td>'.$row["Usuario"].'</td>';
-                       echo '<td>'.$row["Password"].'</td>';
-                       echo '<td>'.$row['Tipo'].'</td>';
-                       echo '<td>'.$row['Status'].'</td>';
-                       echo '<td><label  id="update"><img src="images/actualizar.png" style="width:22px"/> Editar</label></td>';
-                       echo '<td><label id="remove"><img src="images/eliminar.png" style="width:22px" /> Eliminar</label></td>';
+                        echo '<td>'.$row["Password"].'</td>';
+                        echo '<td>'.$row['Tipo'].'</td>';
+                        echo '<td>'.$row['Status'].'</td>';
+                        echo '<td><label  id="update"><img src="images/actualizar.png" style="width:22px"/> Editar</label></td>';
+                        echo '<td><label id="remove"><img src="images/eliminar.png" style="width:22px" /> Eliminar</label></td>';
                         echo '</tr>';
                     }
                     

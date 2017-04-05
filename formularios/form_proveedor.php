@@ -10,35 +10,33 @@
 <body>
 	<?php
     	include '../conexion.php';
-
     ?>
-
-	 <form method="post" action="proveedor.php" class="formulario">
+	 <form class="formulario">
 
               	<div>
               		<label class="formulario">Nombre de la empresa: </label>
-                	<input type="text" required name="txtnombreempresa" class="caja" />
+                	<input type="text" required id="txtnombreempresa" class="caja" />
               	</div>
               	<div>
               		<label class="formulario">Contacto: </label>
-                	<input type="text" required name="txtcontacto" class="caja" />
+                	<input type="text" required id="txtcontacto" class="caja" />
               	</div>
               	<div>
               		<label class="formulario">Teléfono fijo: </label>
-                	<input type="tel" required name="txttelefono" class="caja" />
+                	<input type="tel" required id="txttelefono" class="caja" />
               	</div>
               	<div>
               		<label class="formulario">Teléfono Celular: </label>
-                	<input type="tel" required name="txttelefonocelular" class="caja" />
+                	<input type="tel" required id="txttelefonocelular" class="caja" />
               	</div>
               	<div>
               		<label class="formulario">Correo electrónico: </label>
-                	<input type="email" required name="txtcorreo" class="caja" />
+                	<input type="email" required id="txtcorreo" class="caja" />
               	</div>
               	<div>
                 	<label class="formulario">Estado: </label>
                 	<select id="testadoprov">
-
+                            <?php include 'combo_estado.php'?>
                 	</select>
                 </div>
               	<div>
@@ -64,7 +62,7 @@
                 </div>
 
                 <div>
-                	<input type="submit" value="Enviar" class="btn" /></a>
+                	<input type="button" value="Enviar" class="btn" />
                 </div>
 
      </form>
