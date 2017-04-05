@@ -1,27 +1,4 @@
-$(document).ready(function(){
-$('#tblProveedores').DataTable({
-         "bPaginate": true,
-                "bLengthChange": true,
-                "bFilter": true,
-                "bSort": true,
-                "bInfo": true,
-                "bAutoWidth": true,
-                "language":{
-                    "sSearch":"Buscar",
-                 "lengthMenu": "_MENU_ Datos por pagina",
-                "zeroRecords": "No hay ningun dato que mostrar",
-                "info": "Pagina _PAGE_ de _PAGES_",
-                "infoFiltered": "(Total de datos: _MAX_)",
-                "oPaginate":{
-                   "sFirst":"Primero",
-                    "sLast":"Ultimo",
-                    "sNext":"Siguiente",
-                    "sPrevious":"Anterior",
-                }
-                }
-    });
-   
-
+$(document).ready(function() {
 
 $(document).on('click','#inicio',function (){
     alert();
@@ -34,10 +11,12 @@ $(document).on('click','#usuario',function (){
         dataType: 'html',
         async: false,
         success: function(data) {
-           // $('#contenido').empty();
-            $('#contenido').html(data);     
+            $('#contenido').empty();
+            $('#contenido').html(data);
             $('#tblUsuarios').DataTable({
-         "bPaginate": true,
+                "destroy":true,
+                "searching":true,
+                "bPaginate": true,
                 "bLengthChange": true,
                 "bFilter": true,
                 "bSort": true,
@@ -78,15 +57,15 @@ $(document).on('click','#btnImgAgregarUsu',function (){
         of: window,
         modal: "true"
         });
-            
-          $('#modal').html(data);  
+
+          $('#modal').html(data);
         }
         });
 });
 
 $(document).on('click','#update',function (){
     var id = $(this).parents("tr").find("td").eq(0).html();
-            
+
             $.ajax({
                 type: 'POST',
                 url: "./formularios/form_actualizar_usu.php",
@@ -104,19 +83,55 @@ $(document).on('click','#update',function (){
         of: window,
         modal: "true"
         });
-            
-          $('#modal').html(data); 
+
+          $('#modal').html(data);
         }
             });
 });
 
 
 $(document).on('click','#proveedores',function(){
-    
-               // $('#contenido').empty();
-                $('#contenido').load("proveedores.php");
-               
-   
+
+    $.ajax({
+        dataType:"html",
+        url:"proveedores.php",
+        async:"false",
+        success:function(data){
+            $('#contenido').empty();
+            $('#contenido').html(data);
+            $('#tblProveedor').DataTable({
+        "destroy":true,
+        "searching":true,
+         "bPaginate": true,
+                "bLengthChange": true,
+                "bFilter": true,
+                "bSort": true,
+                "bInfo": true,
+                "bAutoWidth": true,
+                "language":{
+                    "sSearch":"Buscar",
+                 "lengthMenu": "_MENU_ Datos por pagina",
+                "zeroRecords": "No hay ningun dato que mostrar",
+                "info": "Pagina _PAGE_ de _PAGES_",
+                "infoFiltered": "(Total de datos: _MAX_)",
+                "oPaginate":{
+                   "sFirst":"Primero",
+                    "sLast":"Ultimo",
+                    "sNext":"Siguiente",
+                    "sPrevious":"Anterior",
+                }
+                }
+    });
+
+
+        }
+
+
+
+    });
+
+
+
 });
 
 });

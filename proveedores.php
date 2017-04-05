@@ -6,7 +6,8 @@
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css" media="screen"/>
-               <script src="gestionesjs/administracion.js" type="text/javascript"></script>
+               <script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>
+
     </head>
     <body>
         <table style="font-family: Arial">
@@ -16,7 +17,7 @@
            </tr>
         </table>
 
-        <table id="tblProveedores" >
+        <table id="tblProveedor">
             <thead>
                 <tr>
             <th style="display:none"></th>
@@ -38,9 +39,11 @@
                     $rs = $execute->fetchAll();
                     foreach ($rs as $row){
                         echo '<tr>';
-                        echo '<td></td>';
-                        echo '<td></td>';
-                        echo '<td></td>';
+                       echo '<td style="display:none">'.$row['idProveedor'].'</td>';
+                        echo '<td>'.$row['empresa'].'</td>';
+                        echo '<td>'.utf8_encode($row['contacto']).'</td>';
+                        echo '<td>'.$row['telefono'].'</td>';
+                        echo '<td>'.$row['correo'].'</td>';
                        echo '<td><label  id="update"><img src="images/actualizar.png" style="width:22px"/> Editar</label></td>';
                        echo '<td><label id="remove"><img src="images/eliminar.png" style="width:22px" /> Eliminar</label></td>';
                         echo '</tr>';
