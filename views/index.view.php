@@ -1,35 +1,3 @@
-<?php
-
- $fotos_por_pagina = 16;
-
-    $pagina_actual = (isset($_GET['p']) ? (int)$_GET['p'] : 1);
-    $inicio = ($pagina_actual > 1) ? $pagina_actual * $fotos_por_pagina - $fotos_por_pagina : 0;
-
-    $conexion = conexion('proyecto', 'root', '');
-
-    if (!$conexion) {
-        die();
-    }
-
-    $statement = $conexion->prepare("
-        SELECT SQL_CALC_FOUND_ROWS * FROM timagen LIMIT $inicio, $fotos_por_pagina
-    ");
-
-    $statement->execute();
-    $fotos = $statement->fetchAll();
-
-    if (!$fotos) {
-        header('Location: index.php');
-    }
-
-    $statement = $conexion->prepare("SELECT FOUND_ROWS() as total_filas");
-    $statement->execute();
-    $total_post = $statement->fetch()['total_filas'];
-
-    $total_paginas = ceil($total_post / $fotos_por_pagina);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,7 +71,7 @@
         <?php foreach($fotos as $foto):?>
         <div class="imagen1 col-4 col-m-6"> 
             <p><?php echo "<h2>".$foto['Nombre']."</h2>"; ?></p>
-            <a href="fotos.php?id=<?php echo $foto['idImagen']; ?>">
+            <a href="fotos.php?idImagen=<?php echo $foto['idImagen']; ?>">
                 <img src="images/bd/<?php echo $foto['Imagen'] ?>" alt="<?php echo $foto['Descripcion'] ?>">
             </a>
             <p><?php echo $foto['Descripcion']; ?></p>
@@ -116,7 +84,7 @@
     <?php if($pagina_actual > 1): ?>
         <a href="index.php?p=<?php echo $pagina_actual - 1; ?>" class="izquierda col-6 col-m-6"><span class="icon-arrow-left-alt1"></span> Página Anterior</a>
     <?php endif ?>
-    <?php if($pagina_actual != $pagina_actual): ?>
+    <?php if($total_paginas != $pagina_actual): ?>
         <a href="index.php?p=<?php echo $pagina_actual + 1; ?>" class="derecha col-6 col-m-6">Página Siguiente <span class="icon-arrow-right-alt1"></span></a>
     <?php endif ?>  
         </div>
@@ -126,6 +94,7 @@
     </footer>
     </div> 
 </body>
+<!--<script type="text/javascript" href="js/jsindex.js"></script>-->
 <script type="text/javascript">
     var slideIndex = 0;
     showSlides();
