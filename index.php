@@ -1,14 +1,14 @@
 <?php
 
 
-session_start();
-if(empty($_SESSION['idUsuario']) && empty($_SESSION['Tipo'])){
+//session_start();
+//if(empty($_SESSION['idUsuario']) && empty($_SESSION['Tipo'])){
     include 'conexion.php';
     include 'views/index.view.php';
-}else{
+//}else{
 
-header("Location: formularios/form_cliente.php");
-}
+//header("Location: formularios/form_cliente.php");
+//}
 
 
 ?>

@@ -16,7 +16,7 @@ $(document).on('click','#btnIngresar',function (){
             }else if(bnd == 3){
                 alert("Lo sentimos su cuenta no esta disponible");
             }else if(bnd == 4){
-                window.location = "administradorPagina.php";
+                window.location = "administradorpagina.php";
             }else{
                 alert(bnd);
             }
