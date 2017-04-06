@@ -23,11 +23,11 @@
               	</div>
               	<div>
               		<label class="formulario">Teléfono fijo: </label>
-                	<input type="tel" required id="txttelefono" class="caja" />
+                	<input type="tel" required id="txttelefono" class="caja" maxlength="8"/>
               	</div>
               	<div>
               		<label class="formulario">Teléfono Celular: </label>
-                	<input type="tel" required id="txttelefonocelular" class="caja" />
+                <input type="tel" required id="txttelefonocelular" maxlength="10" class="caja" />
               	</div>
               	<div>
               		<label class="formulario">Correo electrónico: </label>
@@ -42,21 +42,21 @@
               	<div>
               		<label class="formulario">Municipio: </label>
                 	<select id="tmunicipioprov">
-                		<option>SELECCIONE UNA OPCION.....</option>
+                		<option value="0">SELECCIONE UNA OPCION.....</option>
 
                 	</select>
               	</div>
                 <div>
                 	<label class="formulario">Colonia: </label>
                 	<select id="tcoloniaprov">
-                		<option>SELECCIONE UNA OPCION.....</option>
+                		<option value="0">SELECCIONE UNA OPCION.....</option>
 
                 	</select>
                 </div>
                 <div>
                 	<label class="formulario">Código postal: </label>
                 	<select id="tcpprov">
-                		<option>SELECCIONE UNA OPCION.....</option>
+                		<option value="0">SELECCIONE UNA OPCION.....</option>
 
                 	</select>
                 </div>

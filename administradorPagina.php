@@ -6,10 +6,12 @@
         <script src="js/jquery-3.2.0.js" type="text/javascript"></script>
         <script src="js/jquery-ui.min.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
+        <script src="js/sweetalert.min.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"/>
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
         <link rel="stylesheet"  href="css/style.css" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="css/estilosform.css"/>
+        <link rel="stylesheet" type="text/css" href="css/sweetalert.css"/>
         <script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>
         <script src="gestionesjs/Usuarios.js" type="text/javascript"></script>
         <script src="gestionesjs/Proveedores.js" type="text/javascript"></script>

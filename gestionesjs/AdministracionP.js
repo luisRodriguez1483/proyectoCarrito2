@@ -63,31 +63,7 @@ $(document).on('click','#btnImgAgregarUsu',function (){
         });
 });
 
-$(document).on('click','#update',function (){
-    var id = $(this).parents("tr").find("td").eq(0).html();
 
-            $.ajax({
-                type: 'POST',
-                url: "./formularios/form_actualizar_usu.php",
-                data: {id:id},
-                success: function (data) {
-             $('#modal').dialog({
-        title: "Gestion de Usuarios",
-        width: 550,
-        height: 400,
-        show: "fold",
-        hide: "scale",
-        resizable: "false",
-        my: "center",
-        at: "center",
-        of: window,
-        modal: "true"
-        });
-
-          $('#modal').html(data);
-        }
-            });
-});
 
 
 $(document).on('click','#proveedores',function(){
@@ -123,11 +99,7 @@ $(document).on('click','#proveedores',function(){
                 }
     });
 
-
         }
-
-
-
     });
 
 

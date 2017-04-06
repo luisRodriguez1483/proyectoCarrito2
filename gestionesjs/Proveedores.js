@@ -36,26 +36,50 @@ $(document).on('click','#btnInsertarProveedor',function(){
     var idCol = $('#tcoloniaprov').val();
     var cp = $('#tcpprov').val();
 
+    if(empresa.trim() == "" || contacto.trim() == "" || telefono.trim() == ""|| celular.trim() == ""|| correo.trim() == "" || idEstado == 0 || idMunicipio == 0 || idCol == 0 || cp== 0){
+        
+        swal("No debe dejar campos vacios","","error");
 
-    if(!empresa.length == 0 || contacto.length != 0 || telefono.length != 0 || celular.length != 0 || correo.length != 0 || idEstado != 0 || idMunicipio != 0 || idCol !=0 || cp!=0){
-
-        alert("manda ajax");
+    }else{
+        
+        if(correo.indexOf('@', 0) == -1 || correo.indexOf('.', 0) == -1){
+            swal("Correo invalido","Por favor ingrese nuevamente el correo","error");
+        }else{
         $.ajax({
         type:'POST',
         url:'./gestionesphp/insertarProvee.php',
-data:{empresa:empresa,contacto:contacto,telefono:telefono,celular:celular,correo:correo,idEstado:idEstado,idMunicipio:idMunicipio,idCol:idCol,cp:cp},
+data:{empresa:empresa,
+      contacto:contacto,
+      telefono:telefono,
+      celular:celular,
+      correo:correo,
+      idEstado:idEstado,
+      idMunicipio:idMunicipio,
+      idCol:idCol,
+      cp:cp
+     },
         success: function(postMessage){
-
-
-
-
+            if(postMessage == 1){
+               
+                swal({title:'¡Exito!',
+                      text:'El registro se ha realizado correctamente',
+                      type:"success",
+                     showConfirmButton:true},
+                     function (){
+                        window.location.reload();
+                     });
+               }else {
+                   
+                   alert(postMessage);
+               }
+            
+            
         }
 
     });
+      
+        }
 
-    }else{
-
-        alert("Debe llenar todos los campos");
 
     }
 });
