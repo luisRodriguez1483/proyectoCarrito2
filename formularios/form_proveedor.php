@@ -62,7 +62,7 @@
                 </div>
 
                 <div>
-                	<input type="button" value="Enviar" class="btn" />
+                	<input type="button" value="Enviar" class="btn" id="btnInsertarProveedor"/>
                 </div>
 
      </form>
