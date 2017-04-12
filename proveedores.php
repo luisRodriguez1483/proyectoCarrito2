@@ -6,14 +6,14 @@
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css" media="screen"/>
-               <script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>
+               <!--<script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>-->
 
     </head>
     <body>
         <table style="font-family: Arial">
            <tr>
                 <td class="filaAgregar"><img  src="images/agregar.png" id="btnImgAgregarPro" style="width: 30px;"/></td>
-                <td class="filaAgregar">Agregar....</td>
+                <td class="filaAgregar">Nuevo ....</td>
            </tr>
         </table>
 
@@ -25,7 +25,7 @@
             <th>Contacto</th>
             <th>Telefono</th>
             <th>Correo</th>
-            <th></th>
+            <th>Acciones.....</th>
             <th></th>
                 </tr>
             </thead>
@@ -44,8 +44,8 @@
                         echo '<td>'.utf8_encode($row['contacto']).'</td>';
                         echo '<td>'.$row['telefono'].'</td>';
                         echo '<td>'.$row['correo'].'</td>';
-                       echo '<td><label  id="updateProveedor"><img src="images/actualizar.png" style="width:22px"/> Editar</label></td>';
-                       echo '<td><label id="removeProveedor"><img src="images/eliminar.png" style="width:22px" /> Eliminar</label></td>';
+                       echo '<td><label  id="updateProveedor"><img src="images/alt-editar-icono-5470-128.png" style="width:22px"/> Editar</label></td>';
+                       echo '<td><label id="removeProveedor"><img src="images/eliminar.gif" style="width:22px" /> Eliminar</label></td>';
                         echo '</tr>';
                     }
 

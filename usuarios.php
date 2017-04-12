@@ -6,13 +6,14 @@
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css" media="screen"/>
-               <script src="gestionesjs/Administracion.js" type="text/javascript"></script>
+               <!--<script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>-->
+
     </head>
     <body>
         <table style="font-family: Arial"> 
            <tr>
                 <td class="filaAgregar"><img  src="images/agregar.png" id="btnImgAgregarUsu" style="width: 30px;"/></td>
-                <td class="filaAgregar">Agregar....</td>
+                <td class="filaAgregar">Nuevo ...</td>
            </tr>
         </table>
    
@@ -43,8 +44,8 @@
                         echo '<td>'.$row["Password"].'</td>';
                         echo '<td>'.$row['Tipo'].'</td>';
                         echo '<td>'.$row['Status'].'</td>';
-                        echo '<td><label  id="update"><img src="images/actualizar.png" style="width:22px"/> Editar</label></td>';
-                        echo '<td><label id="remove"><img src="images/eliminar.png" style="width:22px" /> Eliminar</label></td>';
+                        echo '<td><label  id="update"><img src="images/alt-editar-icono-5470-128.png" style="width:22px"/> Editar</label></td>';
+                        echo '<td><label id="remove"><img src="images/eliminar.gif" style="width:22px" /> Eliminar</label></td>';
                         echo '</tr>';
                     }
                     

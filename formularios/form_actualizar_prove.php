@@ -46,6 +46,135 @@
               		<label class="formulario">Correo electrónico: </label>
                 	<input type="email" required id="txtcorreo" class="caja" value="<?php echo utf8_encode($row['correo'])?>"/>
               	</div>
+                    <div>
+                	<label class="formulario">Estado: </label>
+                	<select id="testadoprov">
+                           <option>SELECCIONE UNA OPCION.....</option>
+                		<?php
+                		try{
+                		$consulta = "select * from testado";
+						$var = $conexion->query($consulta);
+						$jaja = $var->fetchAll();
+						foreach ($jaja as $fila) {
+
+                            if($row['idEstado'] == $fila['idEstado']){
+
+                		?>
+                		<option value="<?php echo $row['idEstado']; ?>" selected><?php echo utf8_encode($fila['Estado']);?></option>
+                		<?php
+                            }else{
+                                ?>
+                        <option value="<?php echo $fila['idEstado']; ?>"><?php echo utf8_encode($fila['Estado']);?>
+                                <?php
+						}
+                        }
+                		}catch(Exception $error){
+								echo "ERROR DE CONSULTA ".$error->getMessage();
+						}
+                		?>
+
+                	</select>
+                </div>
+
+
+              	<div>
+              		<label class="formulario">Municipio: </label>
+                	<select id="tmunicipioprov">
+                		<?php
+                        try{
+                            $query = "SELECT * FROM tmunicipio WHERE idEstado=".$row['idEstado'];
+                           $id = $conexion->query($query);
+                            $rs1 = $id->fetchAll();
+
+                            foreach($rs1 as $row1){
+                                if($row['idMunicipio'] == $row1['idMunicipio']){
+                                ?>
+             <option value="<?php echo $row['idMunicipio']; ?>" selected><?php echo utf8_encode($row1['Municipio']); ?></option>
+                                <?php
+                                }else {
+                                    ?>
+                        <option value="<?php echo $row1['idMunicipio']; ?>"><?php echo utf8_encode($row1['Municipio']); ?></option>
+                                    <?php
+                                }
+                            }
+                        }catch(Exception $ex){
+                            echo 'ERROR EN A LA CONSULTA '.$ex->getMessage();
+                        }
+
+
+                        ?>
+
+                	</select>
+              	</div>
+
+
+                <div>
+                	<label class="formulario">Colonia: </label>
+                	<select id="tcoloniaprov">
+                		<?php
+                        try{
+                            $consultacol = "select * from tcolonia where idMunicipio=".$row['idMunicipio']."";
+							$varcol = $conexion->query($consultacol);
+							$contcol = $varcol->fetchAll();
+
+							foreach ($contcol as $filac) {
+
+                                if($row['idColonia'] == $filac['idColonia']){
+
+
+						?>
+				<option value="<?php echo $row['idColonia']; ?>" selected><?php echo utf8_encode($filac['Colonia']); ?></option>
+						<?php
+                                }else {
+
+                                    ?>
+                 <option value="<?php echo $filac['idColonia']; ?>"><?php echo utf8_encode($filac['Colonia']); ?></option>
+                        <?php
+                                }
+							}
+                        }catch(Exception $ex){
+                            echo 'ERROR CONSULTA '.$ex->getMessage();
+                        }
+
+
+                        ?>
+                	</select>
+                </div>
+
+
+                <div>
+                	<label class="formulario">Código postal: </label>
+                	<select id="tcpprov">
+                <?php
+                        try{
+
+                            $consultacp = "select CodPostal from tcolonia where idColonia=".$row['idColonia']."";
+							$varcp = $conexion->query($consultacp);
+							$contcp = $varcp->fetchAll();
+							foreach ($contcp as $fila) {
+
+                                if($row['idColonia'] == $fila['idColonia']){
+
+						?>
+                <option value="<?php echo $row['CodPostal']; ?>" selected><?php echo utf8_encode($fila['CodPostal']); ?></option>
+						<?php
+                                }else{
+                                    ?>
+                       	<option value="<?php echo $fila['CodPostal']; ?>"><?php echo utf8_encode($fila['CodPostal']); ?></option>
+                        <?php
+
+                                }
+							}
+
+                        }catch(Exception $ex){
+                            echo 'ERRRO DE CONSULTA '.$ex->getMessage();
+                        }
+
+
+                        ?>
+
+                	</select>
+                </div>
 
                 <div>
                 	<input type="button" value="Enviar" class="btn" id="btnActualizarProveedor"/>

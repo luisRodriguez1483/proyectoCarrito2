@@ -112,6 +112,7 @@ var idProveedor = $(this).parents("tr").find("td").eq(0).html();
                swal({
                    title:'¡Exito!',
                    text:'El registro de ha eliminado correctamente',
+                   type:'success',
                    showConfirmButton:true},
                     function(){
                    window.location.reload();
@@ -152,7 +153,6 @@ $(document).on('click','#updateProveedor',function(){
         of: window,
         modal: "true"
 
-
         });
         $('#modal').html(postMessage);
         }
@@ -179,6 +179,10 @@ $(document).on('click','#btnActualizarProveedor',function(){
     var telefono = $('#txttelefono').val();
     var celular = $('#txttelefonocelular').val();
     var correo = $('#txtcorreo').val();
+    var idEstado = $('#testadoprov').val();
+    var idMunicipio = $('#tmunicipioprov').val();
+    var idCol = $('#tcoloniaprov').val();
+    var cp = $('#tcpprov').val();
 
         $.ajax({
             type:'POST',
@@ -189,11 +193,26 @@ $(document).on('click','#btnActualizarProveedor',function(){
                 contacto:contacto,
                 telefono:telefono,
                 celular:celular,
-                correo:correo
+                correo:correo,
+                idEstado:idEstado,
+                idMunicipio:idMunicipio,
+                idCol:idCol,
+                cp:cp
             },
             success:function(postMessage){
                 if(postMessage == 1){
 
+                    swal({
+                        title:'Exito',
+                        type:'success',
+                        text:'El registro se actualizo con exito',
+                        showConfirmButton:true},
+                         function(){
+                        window.location.reload();
+
+                    });
+                   }else {
+                       alert(postMessage);
                    }
             }
         });

@@ -3,6 +3,7 @@
         <meta charset="UTF-8">
         <title></title>
         
+
         <script src="js/jquery-3.2.0.js" type="text/javascript"></script>
         <script src="js/jquery-ui.min.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
@@ -55,7 +56,7 @@
                 
             
             <?php }else {?>
-<li>
+                <li>
                     <div class="barra"></div>
                     <p id = "proveedores">Proveedores</p>
                 </li>
@@ -76,7 +77,7 @@
                 </li>
                 <li>
                     <div class="barra"></div>
-                    <p id="btnSalir"></a>Salir</p>
+                    <p id="btnSalir">Salir</p>
                 </li>   
                 </ul>
             </nav>
