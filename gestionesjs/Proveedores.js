@@ -89,26 +89,84 @@ data:{empresa:empresa,
 
 $(document).on('click','#removeProveedor',function(){
 
-    var conf = confirm("Esta seguro de eliminar a este proveedor");
+var idProveedor = $(this).parents("tr").find("td").eq(0).html();
+    swal({
 
-    // 1 == si
-    // 0 == no
-    if(conf == 1){
-       alert("si");
-       }else{
-           alert("no");
-       }
+        title:"¿Seguro que desea continuar con esta accion?",
+        text:"No podras deshacer estos cambios",
+        type:"warning",
+        showCancelButton:true,
+        cancelButtonText:"Cancelar",
+        showConfirmButton:true,
+        confirmButtonText:"Confirmar",
+        closeOnConfirm:false},
+         function(){
+
+    $.ajax({
+        type:'POST',
+        url:'./gestionesphp/eliminarProvee.php',
+        data:{idProveedor:idProveedor},
+        success:function(postMessage){
+
+            if(postMessage == 1){
+               swal({
+                   title:'¡Exito!',
+                   text:'El registro de ha eliminado correctamente',
+                   showConfirmButton:true},
+                    function(){
+                   window.location.reload();
+               });
+
+               }else {
+
+                   alert(postMessage);
+               }
+
+        }
+    });
+
+
+    });
+
 });
 
+$(document).on('click','#updateProveedor',function(){
 
+     var idProveedor = $(this).parents("tr").find("td").eq(0).html();
+
+    $.ajax({
+
+        type:'POST',
+        url:'./formularios/form_actualizar_prove.php',
+        data:{idProveedor:idProveedor},
+        success:function(postMessage){
+             $('#modal').dialog({
+            title: "Gestion de Proveedores",
+        width: 650,
+        height: 500,
+        show: "fold",
+        hide: "cale",
+        resizable: "false",
+        my: "center",
+        at: "center",
+        of: window,
+        modal: "true"
+
+
+        });
+        $('#modal').html(postMessage);
+        }
+    });
+
+});
 
 
 $(document).on('change','#testadoprov',function(){
     var idEstado = $('#testadoprov').val();
-    alert(idEstado);
+
     $.ajax({
         type:'POST',
-        url:'./formularios/combo_mun_prove.php',
+        url:'./formularios/combo_municipio.php',
         data:{idEstado:idEstado},
         success: function (comboMun){
             $('#tmunicipioprov').html(comboMun);
@@ -120,10 +178,10 @@ $(document).on('change','#testadoprov',function(){
 $(document).on('change','#tmunicipioprov',function(){
     var idMunicipio = $('#tmunicipioprov').val();
 
-    alert(idMunicipio);
+
     $.ajax({
         type:'POST',
-        url:'./formularios/combo_col_prove.php',
+        url:'./formularios/combo_colonia.php',
         data:{idMunicipio:idMunicipio},
         success: function(colonias){
             $('#tcoloniaprov').html(colonias);
@@ -134,11 +192,11 @@ $(document).on('change','#tmunicipioprov',function(){
 
 $(document).on('change','#tcoloniaprov',function(){
     var idCol = $('#tcoloniaprov').val();
-    alert(idCol);
+
 
     $.ajax({
         type:'POST',
-        url:'./formularios/combo_cp_prove.php',
+        url:'./formularios/combo_cp.php',
         data:{idCol:idCol},
         success: function(cp){
             $('#tcpprov').html(cp);

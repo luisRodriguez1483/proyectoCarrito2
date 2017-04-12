@@ -61,6 +61,8 @@ $(document).on('click','#btnRegUsuario',function (){
                 });
                 
                
+            }else {
+                alert(bnd);
             }
             
             
@@ -95,7 +97,7 @@ $(document).on('click','#btnActUsuario',function () {
         success: function (bnd) {
             if(bnd == 1){
                 swal({title:"Hecho",
-                      text:"El usuario ha sido actualizado con exito",
+                      text:"El registro se ha eliminado correctamente",
                       type:"success",
                      showConfirmButton:true},
                      function(){

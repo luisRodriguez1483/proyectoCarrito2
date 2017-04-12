@@ -7,11 +7,13 @@
         <script src="js/jquery-ui.min.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
         <script src="js/sweetalert.min.js" type="text/javascript"></script>
+
         <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"/>
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
         <link rel="stylesheet"  href="css/style.css" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="css/estilosform.css"/>
         <link rel="stylesheet" type="text/css" href="css/sweetalert.css"/>
+
         <script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>
         <script src="gestionesjs/Usuarios.js" type="text/javascript"></script>
         <script src="gestionesjs/Proveedores.js" type="text/javascript"></script>
@@ -20,10 +22,9 @@
 
     <?php
      session_start();
-    if(empty($_SESSION['idUsuario']) && empty($_SESSION['Tipo'])){
+    if(empty($_SESSION['idUsuario']) && empty($_SESSION['Tipo']) && empty($_SESSION['Usuario'])){
     header("Location:index.php");
     }
-
     ?>
     <body>
         <section> 
@@ -31,7 +32,7 @@
         </section>
         <div id="modal"></div>
         <nav>
-            <h1>¡ Bienvenido <?php  echo  $_SESSION['idUsuario'];?> !</h1>
+            <h1>¡ Bienvenido <?php  echo  $_SESSION['Usuario'];?> !</h1>
 <ul>
             <?php if($_SESSION['Tipo'] == "Administrador"){?>
             

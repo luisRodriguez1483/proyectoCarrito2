@@ -25,6 +25,7 @@ try {
                 session_start();
                 $_SESSION['idUsuario'] = $id;
                 $_SESSION['Tipo'] = $tipo;
+                $_SESSION['Usuario'] = $usuario;
                 echo 4;
             }else {
                 echo 3;

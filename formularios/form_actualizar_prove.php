@@ -8,20 +8,34 @@
 </head>
 
 <body>
-	<?php include '../conexion.php'?>
+	<?php
+
+    include '../conexion.php'
+
+    $id = $_POST['idProveedor'];
+    try{
+
+        $query = "SELECT * FROM tproveedor WHERE idProveedor=:id";
+        $sql = $conexion->prepare($query);
+        $sql->execute(array('id'=>$id));
+        $rs = $sql->fetchAll();
+
+        foreach($rs as $row){
+
+    ?>
 	 <form class="formulario">
 
               	<div>
               		<label class="formulario">Nombre de la empresa: </label>
-                	<input type="text" required id="txtnombreempresa" class="caja" />
+                	<input type="text" required id="txtnombreempresa" class="caja" value="<?php $row['empresa']?>" />
               	</div>
               	<div>
               		<label class="formulario">Contacto: </label>
-                	<input type="text" required id="txtcontacto" class="caja" />
+                	<input type="text" required id="txtcontacto" class="caja" value="<?php $row['contacto']?>"/>
               	</div>
               	<div>
               		<label class="formulario">Teléfono fijo: </label>
-                	<input type="tel" required id="txttelefono" class="caja" maxlength="8"/>
+                	<input type="tel" required id="txttelefono" class="caja" maxlength="8" value='<?php $row['telefono']?>'/>
               	</div>
               	<div>
               		<label class="formulario">Teléfono Celular: </label>
@@ -38,7 +52,7 @@
                 	</select>
                 </div>
               	<div>
-              		<label class="formulario">Municipio: </label>
+              		<label class="formulario">Municipio</label>
                 	<select id="tmunicipioprov">
                 		<option value="0">SELECCIONE UNA OPCION.....</option>
 
@@ -60,10 +74,16 @@
                 </div>
 
                 <div>
-                	<input type="button" value="Enviar" class="btn" id="btnInsertarProveedor"/>
+                	<input type="button" value="Enviar" class="btn" id="btnActualizarProveedor"/>
                 </div>
 
      </form>
+
+     }
+
+    }catch(){
+
+    }
 </body>
 
 <footer>

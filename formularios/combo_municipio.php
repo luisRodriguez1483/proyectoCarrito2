@@ -3,7 +3,7 @@
 
 include '../conexion.php';
                 		try{
-                			$consultamun = "select * from tmunicipio where idEstado=".$_POST["idestadocli"]."";
+                			$consultamun = "select * from tmunicipio where idEstado=".$_POST["idEstado"]."";
 							$varmun = $conexion->query($consultamun);
 							$cont = $varmun->fetchAll();
 

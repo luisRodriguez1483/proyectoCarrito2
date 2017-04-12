@@ -3,7 +3,7 @@
 
 include '../conexion.php';
                 		try{
-                			$consultacp = "select CodPostal from tcolonia where idColonia=".$_POST["idcoloniacli"]."";
+                			$consultacp = "select CodPostal from tcolonia where idColonia=".$_POST["idCol"]."";
 							$varcp = $conexion->query($consultacp);
 							$contcp = $varcp->fetchAll();
 							foreach ($contcp as $fila) {

@@ -3,7 +3,7 @@
 
 include '../conexion.php';
                 		try{
-                			$consultacol = "select * from tcolonia where idMunicipio=".$_POST["idmunicipiocli"]."";
+                			$consultacol = "select * from tcolonia where idMunicipio=".$_POST["idMunicipio"]."";
 							$varcol = $conexion->query($consultacol);
 							$contcol = $varcol->fetchAll();
 
