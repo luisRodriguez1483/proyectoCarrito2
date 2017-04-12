@@ -160,6 +160,47 @@ $(document).on('click','#updateProveedor',function(){
 
 });
 
+$(document).on('click','#btnActualizarProveedor',function(){
+    swal({
+
+        title:"¿Seguro que desea continuar con esta accion?",
+        text:"No podras deshacer estos cambios",
+        type:"warning",
+        showCancelButton:true,
+        cancelButtonText:"Cancelar",
+        showConfirmButton:true,
+        confirmButtonText:"Confirmar",
+        closeOnConfirm:false},
+         function(){
+
+    var id = $('#idProv').val();
+    var empresa = $('#txtnombreempresa').val();
+    var contacto = $('#txtcontacto').val();
+    var telefono = $('#txttelefono').val();
+    var celular = $('#txttelefonocelular').val();
+    var correo = $('#txtcorreo').val();
+
+        $.ajax({
+            type:'POST',
+            url:'./gestionesphp/actualizarProvee.php',
+            data:{
+                id:id,
+                empresa:empresa,
+                contacto:contacto,
+                telefono:telefono,
+                celular:celular,
+                correo:correo
+            },
+            success:function(postMessage){
+                if(postMessage == 1){
+
+                   }
+            }
+        });
+
+
+    });
+});
 
 $(document).on('change','#testadoprov',function(){
     var idEstado = $('#testadoprov').val();

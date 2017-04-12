@@ -10,7 +10,7 @@
 <body>
 	<?php
 
-    include '../conexion.php'
+    include '../conexion.php';
 
     $id = $_POST['idProveedor'];
     try{
@@ -27,63 +27,38 @@
 
               	<div>
               		<label class="formulario">Nombre de la empresa: </label>
-                	<input type="text" required id="txtnombreempresa" class="caja" value="<?php $row['empresa']?>" />
+              		<input type="hidden" id="idProv" value="<?php echo $id ?>"/>
+                	<input type="text" required id="txtnombreempresa" class="caja" value="<?php echo utf8_encode($row['empresa'])?>" />
               	</div>
               	<div>
               		<label class="formulario">Contacto: </label>
-                	<input type="text" required id="txtcontacto" class="caja" value="<?php $row['contacto']?>"/>
+                	<input type="text" required id="txtcontacto" class="caja" value="<?php echo utf8_encode($row['contacto'])?>"/>
               	</div>
               	<div>
               		<label class="formulario">Teléfono fijo: </label>
-                	<input type="tel" required id="txttelefono" class="caja" maxlength="8" value='<?php $row['telefono']?>'/>
+                	<input type="tel" required id="txttelefono" class="caja" maxlength="8" value='<?php echo utf8_encode($row['telefono'])?>'/>
               	</div>
               	<div>
               		<label class="formulario">Teléfono Celular: </label>
-                <input type="tel" required id="txttelefonocelular" maxlength="10" class="caja" />
+                <input type="tel" required id="txttelefonocelular" maxlength="10" class="caja" value="<?php echo utf8_encode($row['celular'])?>"/>
               	</div>
               	<div>
               		<label class="formulario">Correo electrónico: </label>
-                	<input type="email" required id="txtcorreo" class="caja" />
+                	<input type="email" required id="txtcorreo" class="caja" value="<?php echo utf8_encode($row['correo'])?>"/>
               	</div>
-              	<div>
-                	<label class="formulario">Estado: </label>
-                	<select id="testadoprov">
-                            <?php include 'combo_estado.php'?>
-                	</select>
-                </div>
-              	<div>
-              		<label class="formulario">Municipio</label>
-                	<select id="tmunicipioprov">
-                		<option value="0">SELECCIONE UNA OPCION.....</option>
-
-                	</select>
-              	</div>
-                <div>
-                	<label class="formulario">Colonia: </label>
-                	<select id="tcoloniaprov">
-                		<option value="0">SELECCIONE UNA OPCION.....</option>
-
-                	</select>
-                </div>
-                <div>
-                	<label class="formulario">Código postal: </label>
-                	<select id="tcpprov">
-                		<option value="0">SELECCIONE UNA OPCION.....</option>
-
-                	</select>
-                </div>
 
                 <div>
                 	<input type="button" value="Enviar" class="btn" id="btnActualizarProveedor"/>
                 </div>
 
      </form>
-
+<?php
      }
 
-    }catch(){
-
+    }catch(Exception $ex){
+        echo $ex->getMessage();
     }
+    ?>
 </body>
 
 <footer>
