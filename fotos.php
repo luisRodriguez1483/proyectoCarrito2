@@ -2,19 +2,17 @@
 
 require 'conexion.php';
 
-$conexion=conexion('proyecto', 'root', '');
-
 if(!$conexion){
     die();
 }
 
-$id=isset($_GET['idImagen']) ? (int) ($_GET['idImagen']) : false;
+$id=isset($_GET['idProducto']) ? (int) ($_GET['idProducto']) : false;
 
 if(!$id){
     header('Location: index.php');
 }
 
-$statement=$conexion->prepare('SELECT * FROM timagen WHERE idImagen = :id');
+$statement=$conexion->prepare('SELECT * FROM tproducto WHERE idProducto = :id');
 $statement->execute(array(':id' => $id));
 
 $foto=$statement->fetch();

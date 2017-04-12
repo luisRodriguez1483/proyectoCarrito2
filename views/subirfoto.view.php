@@ -35,19 +35,36 @@
         <h1>Registrar Producto</h1>
         <div class="subir">
             <form method="POST" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-                <label for="producto">Nombre de la imagén:</label>
+                <label for="producto">Producto:</label>
                 <input type="text" name="producto" id="producto"><br><br>
                 <label for="imagen">Imagén:</label>
                 <input type="file" name="foto" id="imagen"><br><br>
-                <label for="descripcion">Descripción:</label>
+                <label for="descripcion">Descripción:</label><br>
                 <textarea name="descripcion" id="descripcion">
     
                 
-                </textarea>
+                </textarea><br>
                 <?php if(isset($error)): ?>
                 <p class="error"><?php echo $error; ?></p>
                 <?php endif ?>
+                <label for="existencias">Existencias:</label>
+                <input type="text" name="existencias" id="existencias"><br><br>
+                <label for="precio">Precio:</label>
+                <input type="text" name="precio" id="precio"><br><br>
+                <label for="categoria">Categoria:</label>
+                <select name="categoria">
+                <?php foreach($categoria as $cat): ?>
+                    <option value="<?php echo $cat['idCategoria']; ?>"><?php echo $cat['Categoria']; ?></option>
+                    <?php endforeach; ?>
+                </select><br><br>
+                <label for="proveedor">Proveedor:</label>
+                <select name="proveedor">
+                <?php foreach($proveedor as $prov): ?>
+                    <option value="<?php echo $prov['idProveedor']; ?>"><?php echo $prov['empresa']; ?></option>
+                <?php endforeach; ?>
+                </select><br><br>
                 <input type="submit" value="Registrar" onclick="miFuncion();">
+                
             </form>
         </div>
     </article>
