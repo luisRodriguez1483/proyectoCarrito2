@@ -60,25 +60,22 @@
     <div class="catprod">
         <nav class="categorias col-3 col-m-4">
         <ul>
-            <li><a href="">Categoría 1</a></li>
-            <li><a href="">Categoría 2</a></li>
-            <li ><a href="">Categoría 3</a></li>
-            <li><a href="">Categoría 4</a></li>
-            <li><a href="">Categoría 5</a></li>
+            <?php foreach($categorias as $categoria): ?>
+            <li><a href="#"><?php echo $categoria['Categoria']; ?></a></li>
+            <?php endforeach; ?>
         </ul>
     </nav> 
     <article class="imagenes col-9 col-m-8">
         <?php foreach($fotos as $foto):?>
         <div class="imagen1 col-4 col-m-6"> 
-            <p><?php echo "<h2>".$foto['Nombre']."</h2>"; ?></p>
-            <a href="fotos.php?idImagen=<?php echo $foto['idImagen']; ?>">
+            <h2><?php echo $foto['Producto']; ?></h2>
+            <a href="fotos.php?idProducto=<?php echo $foto['idProducto']; ?>">
                 <img src="images/bd/<?php echo $foto['Imagen'] ?>" alt="<?php echo $foto['Descripcion'] ?>">
             </a>
-            <p><?php echo $foto['Descripcion']; ?></p>
-            <input type="submit" value="Comprar">
+            <p><b>$: </b><?php echo $foto['Precio']; ?></p>
+            <span class="icon-shopping-cart"></span><input type="submit" value="Comprar">
             </div>
-        <?php endforeach;?>
-        
+        <?php endforeach;?> 
     </article>
     <div class="paginacion imagenes">
     <?php if($pagina_actual > 1): ?>
@@ -89,10 +86,18 @@
     <?php endif ?>  
         </div>
     </div>
-    <footer>
-        <h1>FOOTER</h1>
-    </footer>
     </div> 
+    <footer>
+        <div class="f2 col-6">
+            <span class="facebook icon-facebook22"><a href="https://www.facebook.com">Visitanos en Facebook</a></span><br><br>
+            <span class="twitter icon-twitter3"><a href="https://www.twitter.com">Siguenos en Twitter</a></span><br><br>
+            <span class="youtube icon-youtube22"><a href="https://www.youtube.com">Suscribete a nuestro canal</a></span><br><br>
+        </div>
+        <div class="f3 col-6">
+            <span class="whats icon-whatsapp2">(55)29082180</span><br><br>
+            <span class="phone icon-phone3">(55)50482010</span>
+        </div>
+    </footer>
 </body>
 <!--<script type="text/javascript" href="js/jsindex.js"></script>-->
 <script type="text/javascript">

@@ -32,8 +32,8 @@
         </ul>
     </header>
     <article class="formulario">
-        <h1>Foto: <?php if(!empty($foto['Nombre'])) {
-            echo $foto['Nombre'];
+        <h1 clas="col-12 col-m-12">Foto: <?php if(!empty($foto['Producto'])) {
+            echo $foto['Producto'];
         }else{
             echo $foto['Imagen'];
         }
@@ -41,7 +41,8 @@
         </h1>
         <div class="foto">
             <img src="images/bd/<?php echo $foto['Imagen']; ?>" alt=""><br>
-            <p><b>Descripción:</b> <?php echo $foto['Descripcion']; ?></p>
+            <p><b>Descripción:</b> <?php echo $foto['Descripcion']; ?></p><br>
+            <p><b>Costo: $ </b><?php echo $foto['Precio']; ?></p>
             <input type="submit" value="Comprar"><br>
             <a href="index.php"><span class="icon-arrow-left-alt1"></span> Regresar</a>
         </div>

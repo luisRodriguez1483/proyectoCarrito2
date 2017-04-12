@@ -25,6 +25,7 @@ body {
     margin-left: 8.33%;
     margin-right: 8.33%;
     background-color: white;
+    /*alv*/
 }
 
 
@@ -269,6 +270,8 @@ body {
     height: auto;
     width: auto;
     float: left;
+    text-align: center;
+    align-content: center;
 }
 
 .categorias ul {
@@ -276,12 +279,12 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    /*ALV*/
 }
 
 .categorias li {
-    border: 1px solid darkslateblue;
-    border-radius: 10px;
-    background-color: lightslategrey
+    border-bottom: 2px solid mediumseagreen;
+    background-color: limegreen;
 }
 
 .categorias li a {
@@ -295,7 +298,7 @@ body {
 }
 
 .categorias li a:hover {
-    background-color: grey;
+    background-color: seagreen;
 }
 
 
@@ -315,15 +318,19 @@ body {
 .imagen1 {
     float: left;
     align-content: center;
-    width: 100%;
     text-align: center;
     height: auto;
-    white-space: pre-line;
 }
 
 .imagen1 img {
     border: 3px solid lightgreen;
     width: 65%;
+    white-space: pre-line;
+    vertical-align: text-top;
+}
+
+.imagen1 p {
+    text-align: center;
 }
 
 .paginacion {
@@ -410,6 +417,56 @@ body {
     height: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+}
+
+
+/*Estilos del footer*/
+
+footer {
+    background-color: lightgrey;
+    margin-top: 10px;
+    padding-top: 10px;
+    overflow: hidden;
+    padding-left: 16.66%;
+}
+
+footer .facebook {
+    color: blue;
+    font-size: 30px;
+}
+
+footer .twitter {
+    color: deepskyblue;
+    font-size: 30px;
+}
+
+footer .youtube {
+    color: red;
+    font-size: 30px;
+}
+
+footer .whats {
+    color: limegreen;
+    font-size: 30px;
+}
+
+footer span a {
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: none;
+    color: white;
+}
+
+footer .phone {
+    color: black;
+    font-size: 30px;
+}
+
+.f1,
+.f2,
+.f3,
+.f4 {
+    float: left;
 }
 
 
