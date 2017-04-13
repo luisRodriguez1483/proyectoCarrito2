@@ -83,10 +83,6 @@ data:{empresa:empresa,
 
     }
 });
-
-
-
-
 $(document).on('click','#removeProveedor',function(){
 
 var idProveedor = $(this).parents("tr").find("td").eq(0).html();
@@ -133,28 +129,16 @@ var idProveedor = $(this).parents("tr").find("td").eq(0).html();
 
 $(document).on('click','#updateProveedor',function(){
 
-     var idProveedor = $(this).parents("tr").find("td").eq(0).html();
-
+  var idProveedor = $(this).parents("tr").find("td").eq(0).html();
     $.ajax({
 
         type:'POST',
         url:'./formularios/form_actualizar_prove.php',
         data:{idProveedor:idProveedor},
         success:function(postMessage){
-             $('#modal').dialog({
-            title: "Gestion de Proveedores",
-        width: 650,
-        height: 500,
-        show: "fold",
-        hide: "cale",
-        resizable: "false",
-        my: "center",
-        at: "center",
-        of: window,
-        modal: "true"
 
-        });
-        $('#modal').html(postMessage);
+            $('#modal').avgrund();
+
         }
     });
 

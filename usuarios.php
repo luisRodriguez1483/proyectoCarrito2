@@ -6,7 +6,7 @@
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css" media="screen"/>
-               <!--<script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>-->
+        <script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>
 
     </head>
     <body>
