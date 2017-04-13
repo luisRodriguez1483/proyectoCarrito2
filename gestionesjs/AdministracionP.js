@@ -1,3 +1,7 @@
+/*$('#myModal').on('shown.bs.modal',function(){
+    $('#btnNuevo').focus();
+});*/
+
 $(document).ready(function() {
 
 $(document).on('click','#inicio',function (){

@@ -26,6 +26,6 @@
                 	</select>
                 </div>
                 <div>
-                    <input type="button" value="Enviar" id="btnRegUsuario"/></a>
+                    <input type="button" value="Enviar" id="btnRegUsuario"/>
                 </div>
      </form>

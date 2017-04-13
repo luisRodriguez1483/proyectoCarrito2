@@ -88,7 +88,7 @@
                 		<option>SELECCIONE UNA OPCION.....</option>
 
                 	</select><br><br><br><br>
-                	<input type="submit" value="Enviar" class="submit" /></a>
+                	<input type="submit" value="Enviar" class="submit" />
      </form>
 	 </article>
      </div>

@@ -10,13 +10,21 @@
 
     </head>
     <body>
-        <table style="font-family: Arial"> 
-           <tr>
-                <td class="filaAgregar"><img  src="images/agregar.png" id="btnImgAgregarUsu" style="width: 30px;"/></td>
-                <td class="filaAgregar">Nuevo ...</td>
-           </tr>
-        </table>
-   
+
+            <div >
+                <a href="#ventanaModal" class="btn btn-success btn-lg"  data-toggle="modal">
+                    <span class="glyphicon glyphicon-plus"></span> Nuevo
+                </a>
+
+                <div class="modal fade" id="ventanaModal">
+                <div class="modal dialog">
+
+                    </div>
+
+                </div>
+
+        </div>
+
         <table id="tblUsuarios" >
             <thead>
                 <tr>
@@ -55,6 +63,8 @@
                 ?>
             </tbody>
         </table>
+
+
         
     </body>
 </html>

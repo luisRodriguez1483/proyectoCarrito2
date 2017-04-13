@@ -11,7 +11,7 @@
                 	<input type="text" required name="txtcategoria" class="caja" />
               	</div>
                 <div>
-                	<input type="submit" value="Enviar" class="btn" /></a>
+                	<input type="submit" value="Enviar" class="btn" />
                 </div>
 
      </form>

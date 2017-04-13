@@ -13,8 +13,9 @@
     <body>
         <table style="font-family: Arial">
            <tr>
-                <td class="filaAgregar"><img  src="images/agregar.png" id="btnImgAgregarPro" style="width: 30px;"/></td>
-                <td class="filaAgregar">Nuevo ....</td>
+                   <button type="button" class="btn btn-success">
+                <span class="glyphicon glyphicon-plus"></span> Nuevo
+                   </button>
            </tr>
         </table>
 
