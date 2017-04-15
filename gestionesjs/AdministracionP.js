@@ -5,11 +5,19 @@
 $(document).ready(function() {
 
 $(document).on('click','#inicio',function (){
-    alert();
+    var lb = new $.LoadingBox();
+
+
+setTimeout(function(){
+  lb.close();
+}, 1000);
+
 });
 
 
 $(document).on('click','#usuario',function (){
+
+
     $.ajax({
         url: "usuarios.php",
         dataType: 'html',
@@ -85,5 +93,11 @@ $(document).on('click','#proveedores',function(){
 
 
 });
+
+
+    $(document).on('click','#categorias',function(){
+        alert();
+    });
+
 
 });

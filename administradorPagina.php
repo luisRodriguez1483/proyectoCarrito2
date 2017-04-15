@@ -10,6 +10,7 @@
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
         <script src="js/sweetalert.min.js" type="text/javascript"></script>
+        <script src="js/jquery.LoadingBox.js" type="text/javascript"></script>
 
         <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"/>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
@@ -71,7 +72,7 @@
                 </li>
                 <li>
                     <div class="barra"></div>
-                    <p>Categorias</p>
+                    <p id="categorias">Categorias</p>
                 </li>
                 <li>
                     <div class="barra"></div>

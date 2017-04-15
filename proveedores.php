@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-        <!--<script src="js/jquery.js" type="text/javascript"></script>
-        <script src="js/jquery.dataTables.js" type="text/javascript"></script>
-        <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css" media="screen"/>
-        <script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>
-        -->
 
-
-
-    </head>
-    <body>
-        <table style="font-family: Arial">
-           <tr>
                    <button type="button" class="btn btn-success" id="btnNuevoAgregarProve">
                 <span class="glyphicon glyphicon-plus"></span> Nuevo
                    </button>
-           </tr>
-        </table>
+
 
         <table id="tblProveedor">
             <thead>
@@ -60,5 +43,3 @@
             </tbody>
         </table>
 
-    </body>
-</html>
