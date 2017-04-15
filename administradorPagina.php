@@ -10,7 +10,7 @@
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
         <script src="js/sweetalert.min.js" type="text/javascript"></script>
-        <script src="js/jquery.LoadingBox.js" type="text/javascript"></script>
+       <script src="js/jquery.pleaseWait.js" type="text/javascript"></script>
 
         <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"/>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
@@ -25,6 +25,7 @@
         <script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>
         <script src="gestionesjs/Usuarios.js" type="text/javascript"></script>
         <script src="gestionesjs/proveedores.js" type="text/javascript"></script>
+        <script src="gestionesjs/Categorias.js" type="text/javascript"></script>
           
     </head>
 
@@ -39,6 +40,7 @@
 
             <div id="contenido" ></div> 
             <div id="modal"></div>
+
         </section>
 
 
@@ -46,7 +48,6 @@
             <h1>¡ Bienvenido <?php  echo  $_SESSION['Usuario'];?> !</h1>
 <ul>
             <?php if($_SESSION['Tipo'] == "Administrador"){?>
-            
                 <li>
                     <div class="barra"></div>
                     <p id="usuario">Usuarios</p>
@@ -57,11 +58,11 @@
                 </li>
                 <li>
                     <div class="barra"></div>
-                    <p>Categorias</p>
+                    <p id="categoria">Categorias</p>
                 </li>
                 <li>
                     <div class="barra"></div>
-                    <p>Productos</p>
+                    <p id="producto">Productos</p>
                 </li>
                 
             
@@ -72,11 +73,11 @@
                 </li>
                 <li>
                     <div class="barra"></div>
-                    <p id="categorias">Categorias</p>
+                    <p id="categoria" onclick="categorias();">Categorias</p>
                 </li>
                 <li>
                     <div class="barra"></div>
-                    <p>Productos</p>
+                    <p id="producto" onclick="productos();">Productos</p>
                 </li>
 
 <?php } ?>

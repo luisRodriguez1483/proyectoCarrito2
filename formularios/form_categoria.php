@@ -1,20 +1,10 @@
-<!DOCTYPE HTML>
-<head>
-<meta charset="utf-8">
-<title>Formulario Categoría</title>
-</head>
+<form method="post" action="categoria.php" class="formulario">
+    <div>
+        <label class="formulario">Categoría: </label>
+        <input type="text" required id="txtcategoria" class="caja" />
+    </div>
+    <div>
+        <input type="button" value="Enviar" class="btn" id="btnRegCategoria"/>
+    </div>
 
-<body>
-	 <form method="post" action="categoria.php" class="formulario">
-              	<div>
-              		<label class="formulario">Categoría: </label>
-                	<input type="text" required name="txtcategoria" class="caja" />
-              	</div>
-                <div>
-                	<input type="submit" value="Enviar" class="btn" />
-                </div>
-
-     </form>
-</body>
-
-
+</form>
