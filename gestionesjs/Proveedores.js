@@ -1,4 +1,6 @@
-$(document).on('click','#btnImgAgregarPro',function (){
+
+
+$(document).on('click','#btnNuevoAgregarProve',function (){
 
     $.ajax({
         url:'./formularios/form_proveedor.php',
@@ -14,9 +16,6 @@ $(document).on('click','#btnImgAgregarPro',function (){
         my: "center",
         at: "center",
         of: window,
-        modal: "true"
-
-
         });
         $('#modal').html(data);
     }
@@ -137,8 +136,18 @@ $(document).on('click','#updateProveedor',function(){
         data:{idProveedor:idProveedor},
         success:function(postMessage){
 
-            $('#modal').avgrund();
-
+            $('#modal').dialog({
+            title: "Gestion de Proveedores",
+        width: 650,
+        height: 500,
+        show: "fold",
+        hide: "scale",
+        resizable: "false",
+        my: "center",
+        at: "center",
+        of: window,
+        });
+        $('#modal').html(postMessage);
         }
     });
 

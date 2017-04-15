@@ -3,39 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title></title>
-        <script src="js/jquery.js" type="text/javascript"></script>
+        <!--<script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css" media="screen"/>
-        <script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>
+        <script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>-->
 
     </head>
     <body>
-
-
-                <button type="button" class="btn btn-success btn-lg"  data-toggle="modal" data-target="#myModal">
-                   <!-- <span class="glyphicon glyphicon-plus"></span>--> Nuevo
+                <button type="button" class="btn btn-success" id="btnNuevoAgregarUsu">
+                   <span class="glyphicon glyphicon-plus"></span> Nuevo
                 </button>
-
-                <div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
 
         <table id="tblUsuarios" >
             <thead>

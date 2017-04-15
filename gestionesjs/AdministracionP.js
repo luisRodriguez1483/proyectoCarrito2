@@ -43,30 +43,6 @@ $(document).on('click','#usuario',function (){
         }
     });
 });
-$(document).on('click','#btnImgAgregarUsu',function (){
-    $.ajax({
-        url: "./formularios/form_usuario.php",
-        dataType: 'html',
-        async: false,
-        success: function(data) {
-            $('#modal').dialog({
-        title: "Gestion de Usuarios",
-        width: 550,
-        height: 400,
-        show: "fold",
-        hide: "scale",
-        resizable: "false",
-        my: "center",
-        at: "center",
-        of: window,
-        modal: "true"
-        });
-
-          $('#modal').html(data);
-        }
-        });
-});
-
 
 
 

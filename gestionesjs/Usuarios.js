@@ -37,6 +37,31 @@ $.ajax({
 });
 
 });
+$(document).on('click','#btnNuevoAgregarUsu',function (){
+    alert();
+    $.ajax({
+        url: "./formularios/form_usuario.php",
+        dataType: 'html',
+        async: false,
+        success: function(data) {
+            $('#modal').dialog({
+        title: "Gestion de Usuarios",
+        width: 550,
+        height: 400,
+        show: "fold",
+        hide: "scale",
+        resizable: "false",
+        my: "center",
+        at: "center",
+        of: window,
+        modal: "true"
+        });
+
+          $('#modal').html(data);
+        }
+        });
+});
+
 
 
 $(document).on('click','#btnRegUsuario',function (){
@@ -98,7 +123,7 @@ $(document).on('click','#btnActUsuario',function () {
         success: function (bnd) {
             if(bnd == 1){
                 swal({title:"Hecho",
-                      text:"El registro se ha eliminado correctamente",
+                      text:"El registro se actualizo correctamente",
                       type:"success",
                      showConfirmButton:true},
                      function(){
@@ -135,7 +160,7 @@ $(document).on('click','#remove',function (){
             success: function (bnd) {
                 if(bnd == 1){
                    swal({title:"Hecho",
-                      text:"El registro se actualizo con exito",
+                      text:"El registro se ha eliminado con exito",
                       type:"success",
                      showConfirmButton:true},
                      function(){

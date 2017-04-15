@@ -4,7 +4,8 @@
         <title></title>
         
 
-        <script src="js/jquery-3.2.0.js" type="text/javascript"></script>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.min.js" type="text/javascript"></script>
        <script src="js/bootstrap.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.js" type="text/javascript"></script>
@@ -16,11 +17,12 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
         <link rel="stylesheet"  href="css/style.css" type="text/css"/>
-        <link rel="stylesheet" type="text/css" href="css/estilosform.css"/>
         <link rel="stylesheet" type="text/css" href="css/sweetalert.css"/>
+        <link rel="stylesheet" type="text/css" href="css/estilosform.css"/>
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
 
         <script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>
-        <script src="gestionesjs/usuarios.js" type="text/javascript"></script>
+        <script src="gestionesjs/Usuarios.js" type="text/javascript"></script>
         <script src="gestionesjs/proveedores.js" type="text/javascript"></script>
           
     </head>
@@ -35,6 +37,7 @@
         <section> 
 
             <div id="contenido" ></div> 
+            <div id="modal"></div>
         </section>
 
 
