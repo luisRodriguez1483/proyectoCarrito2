@@ -36,11 +36,11 @@
         <form action="" methood="POST">
         <div class="contenedorusuario">
         <span class="icon-user3 mail"><label for="correo">      Usuario:</label></span>
-        <input type="text" name="usuario" id="txtusuario" placeholder"Escribe tu usuario:" /><br><br><br>
+        <input type="text" name="usuario" id="txtusuario" placeholder"Escribe tu usuario:"/><br><br><br>
         </div>
         <div class="contenedorpass">
         <span class="icon-locked mail"><label for="asunto">Password:</label></span>
-        <input type="password" name="password" id="txtpassword" placeholder"Escribe tu contraseña:"  /><br><br><br>
+        <input type="password" name="password" id="txtpassword" placeholder"Escribe tu contraseña:" /><br><br><br>
         </div>
         <div class="contenedorbtn">
         <input type="button" value="Ingresar" id="btnIngresar" class="submit">

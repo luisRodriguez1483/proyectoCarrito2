@@ -1,5 +1,4 @@
-$(document).on('click', '#btnIngresar', function () {
-
+function iniciarSesion(){
 
     var usuario = $('#txtusuario').val();
     var pass = $('#txtpassword').val();
@@ -25,7 +24,25 @@ $(document).on('click', '#btnIngresar', function () {
         }
 
     });
+}
+
+
+$(document).on('click', '#btnIngresar', function () {
+
+iniciarSesion();
 });
+
+   /*$("#txtusuario").keypress(function() {
+   if(e.which == 13) {
+          // Acciones a realizar, por ej: enviar formulario.
+         alert();
+       }
+          // Acciones a realizar, por ej: enviar formulario.
+
+
+    });*/
+
+
 
 $(document).on('click', '#btnSalir', function () {
     $.ajax({
