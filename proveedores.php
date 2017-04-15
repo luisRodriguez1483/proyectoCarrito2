@@ -1,12 +1,11 @@
-
-                   <button type="button" class="btn btn-success" id="btnNuevoAgregarProve">
+<button type="button" class="btn btn-success" id="btnNuevoAgregarProve">
                 <span class="glyphicon glyphicon-plus"></span> Nuevo
                    </button>
 
 
-        <table id="tblProveedor">
-            <thead>
-                <tr>
+<table id="tblProveedor">
+    <thead>
+        <tr>
             <th style="display:none"></th>
             <th>Empresa</th>
             <th>Contacto</th>
@@ -14,10 +13,10 @@
             <th>Correo</th>
             <th>Acciones.....</th>
             <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+        </tr>
+    </thead>
+    <tbody>
+        <?php
                 include './conexion.php';
                 try {
                     $query = "SELECT * FROM tproveedor";
@@ -40,6 +39,5 @@
                     echo $exc->getMessage();
                 }
                 ?>
-            </tbody>
-        </table>
-
+    </tbody>
+</table>
