@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <title>Login</title>
         <script src="js/jquery-3.2.0.js" type="text/javascript"></script>
+              <script src="js/sweetalert.min.js" type="text/javascript"></script>
+     <link rel="stylesheet" type="text/css" href="css/sweetalert.css"/>
         <script src="gestionesjs/Usuarios.js" type="text/javascript"></script>
         <link href="css/styleindex.css" rel="stylesheet"/>
         <link rel="stylesheet" href="fonts/style.css">

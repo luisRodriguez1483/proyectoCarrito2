@@ -2,7 +2,11 @@ function iniciarSesion(){
 
     var usuario = $('#txtusuario').val();
     var pass = $('#txtpassword').val();
-    $.ajax({
+    if(usuario.trim() == "" || pass.trim() == ""){
+       swal('ERROR','Debe llenar todos los campos','error');
+
+       }else{
+           $.ajax({
         type: 'POST',
         url: "./gestionesphp/inicioSession.php",
         data: {
@@ -11,11 +15,11 @@ function iniciarSesion(){
         },
         success: function (bnd) {
             if (bnd == 1) {
-                alert("El usuario ingresado no existe");
+                swal("ERROR","El usuario ingresado no existe","error");
             } else if (bnd == 2) {
-                alert("La contraseña es incorrecta");
+                swal("ERROR","La contraseña es incorrecta",'error');
             } else if (bnd == 3) {
-                alert("Lo sentimos su cuenta no esta disponible");
+                swal("ERROR","Lo sentimos su cuenta no esta disponible",'error');
             } else if (bnd == 4) {
                 window.location = "administradorPagina.php";
             } else {
@@ -24,6 +28,11 @@ function iniciarSesion(){
         }
 
     });
+       }
+/*
+
+
+    */
 }
 
 
@@ -32,15 +41,20 @@ $(document).on('click', '#btnIngresar', function () {
 iniciarSesion();
 });
 
-   /*$("#txtusuario").keypress(function() {
+   $(document).on('keypress','#txtusuario',function(e) {
    if(e.which == 13) {
-          // Acciones a realizar, por ej: enviar formulario.
-         alert();
+          // Acciones a realizar, por ej: enviar formulario. "#txtusuario"
+         iniciarSesion();
        }
           // Acciones a realizar, por ej: enviar formulario.
+    });
+$(document).on('keypress','#txtpassword',function(e){
+    if(e.which == 13){
 
+        iniciarSesion();
+       }
 
-    });*/
+});
 
 
 
