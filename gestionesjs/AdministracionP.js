@@ -9,7 +9,7 @@ $(document).ready(function () {
         $('body').pleaseWait();
         setTimeout(function () {
             parar()
-        }, 200);
+        }, 500);
         $.ajax({
             url: "usuarios.php",
             dataType: 'html',
@@ -50,7 +50,7 @@ $(document).ready(function () {
         $('body').pleaseWait();
         setTimeout(function () {
             parar()
-        }, 200);
+        }, 500);
         $.ajax({
             dataType: "html",
             url: "proveedores.php",
@@ -90,7 +90,7 @@ $(document).ready(function () {
         $('body').pleaseWait();
         setTimeout(function () {
             parar()
-        }, 200);
+        }, 500);
 
         $.ajax({
             dataType: 'html',
