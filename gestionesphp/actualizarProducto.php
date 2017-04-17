@@ -15,7 +15,7 @@ $ruta = "../albumProductos/".$nombreImagenPro;
 
 if($_FILES['txtimagen']['tmp_name'] == ""){
 
-$query = "SELECT * FROM tproducto";
+$query = "SELECT Existencias FROM tproducto WHERE idProducto=:idProducto";
 
 
 }else {

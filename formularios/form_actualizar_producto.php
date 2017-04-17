@@ -78,8 +78,9 @@
                 	</select>
                 </div>
 				<div>
-                	<label class="formulario">Existencias: </label>
-                	<input type="text" required name="txtexistencia" id="txtexistencia" class="caja" value="<?php echo $row['Existencias']?>"/>
+                	<label class="label label-success">Existencias disponibles: <?php echo $row['Existencias']?> </label><br><br>
+                    Agregar
+                	<input type="number" required name="txtexistencia" id="txtexistencia" class="caja" min="0" placeholder="Agregar"/>
                 </div>
                  <div>
                 	<label class="formulario">Precio compra: </label>
