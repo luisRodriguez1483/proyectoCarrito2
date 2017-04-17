@@ -1,11 +1,12 @@
 <?php
 include '../conexion.php';
+
 $producto = $_POST['txtnommbreproducto'];
-$caracteristicas = $_POST['txtcaracteristicas'];
+$descripcion = $_POST['txtcaracteristicas'];
 $categoria = $_POST['tcat'];
 $proveedor = $_POST['tprov']; 
 $pCompra = $_POST['txtcompra'];
-$pVenta = $_POST['txtexistencia'];
+$existencias = $_POST['txtexistencia'];
 $tipoImagenPro = $_FILES['txtimagen']['type'];
 $nombreImagenPro = $_FILES['txtimagen']['name'];
 $ruta = "../albumProductos/".$nombreImagenPro;
@@ -14,23 +15,44 @@ if($_FILES['txtimagen']['tmp_name']!=""){
 if($tipoImagenPro == "image/jpeg" || $tipoImagenPro == "image/png"){
 if(move_uploaded_file($_FILES['txtimagen']['tmp_name'],$ruta) == true){
 try{
-$queryInsert = "INSERT INTO tproducto(Producto,Imagen,Descripcion,Existencias,Precio,idCategoria,idProveedor)
- VALUES(:producto,:imagen,:descripcion,:existencias,:precio,:idCate,:idProve)";
+    
+    $pVenta = $pCompra*1.25;
+    
+$queryInsert = "INSERT INTO tproducto(Producto,Imagen,Descripcion,Existencias,Precio,PrecioVenta,idCategoria,idProveedor)
+ VALUES(:producto,:imagen,:descripcion,:existencias,:precio,:precioVenta,:idCate,:idProve)";
+    
+    $sql = $conexion->prepare($queryInsert);
+    
+    $sql->bindParam(':producto',$producto);
+    $sql->bindParam(':imagen',$nombreImagenPro);
+    $sql->bindParam(':descripcion',$descripcion);
+    $sql->bindParam(':existencias',$existencias);
+    $sql->bindParam(':precio',$pCompra);
+    $sql->bindParam(':precioVenta',$pVenta);
+    $sql->bindParam(':idCate',$categoria);
+    $sql->bindParam(':idProve',$proveedor);
+
+$resultado =  $sql->execute();
+
+if($resultado == true){
+echo 4;
+}
 
 }catch(Exception $ex){
 echo 'ERROR AL INSERTAR '.$ex->getMessage();
 }
 
 }else {
-    echo 'Error al subir el archivo';
+    echo 3;
 }
 
 }else {
 
-    echo "Tipo de archivo no permitido ";
+    echo 2;
 }
 }else{
-echo 'No selecciono una imagen';
+    
+echo 1;
 
 }
 //echo $producto.' '.$caracteristicas.' '.$categoria.' '.$proveedor.' '.$pCompra.' '.$pVenta;

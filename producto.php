@@ -7,11 +7,12 @@
     <thead>
         <tr>
             <th style="display:none"></th>
-            <!--<th>Foto</th>-->
+            <th>Foto</th>
             <th>Producto</th>
             <th>Descripcion</th>
             <th>Existencias</th>
-            <th>Precio</th>
+            <th>P Compra</th>
+            <th>P Venta</th>
             <th></th>
             <th></th>
         </tr>
@@ -27,10 +28,12 @@
                     foreach ($rs as $row){
                         echo '<tr>';
                         echo '<td style="display:none">'.$row['idProducto'].'</td>';
+                        echo '<td><img style="width:45px"src="albumProductos/'.$row['Imagen'].'"/></td>';
                         echo '<td>'.$row['Producto'].'</td>';
                         echo '<td>'.$row['Descripcion'].'</td>';
                         echo '<td>'.$row['Existencias'].'</td>';
                         echo '<td>'.$row['Precio'].'</td>';
+                        echo '<td>'.$row['PrecioVenta'].'</td>';
                        echo '<td><label  id="updateProducto"><img src="images/alt-editar-icono-5470-128.png" style="width:22px"/> Editar</label></td>';
                        echo '<td><label id="removeProducto"><img src="images/eliminar.gif" style="width:22px" /> Eliminar</label></td>';
                         echo '</tr>';

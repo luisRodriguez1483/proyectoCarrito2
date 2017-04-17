@@ -40,7 +40,7 @@
         ?>
         </h1>
         <div class="foto">
-            <img src="images/bd/<?php echo $foto['Imagen']; ?>" alt=""><br>
+            <img src="albumProductos/<?php echo $foto['Imagen']; ?>" alt=""><br>
             <p><b>Descripción:</b> <?php echo $foto['Descripcion']; ?></p><br>
             <p><b>Costo: $ </b><?php echo $foto['Precio']; ?></p>
             <input type="submit" value="Comprar"><br>

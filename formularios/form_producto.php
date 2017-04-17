@@ -8,13 +8,13 @@
                 	<input type="text" required name="txtnommbreproducto" id="txtnommbreproducto" class="caja" />
               	</div>
               	<div>
-              		<label class="formulario">Caracteristicas: </label>
+              		<label class="formulario">Descripcion: </label>
                 	<input type="text" required name="txtcaracteristicas" id="txtcaracteristicas" class="caja" />
               	</div>
               	<div>
               		<label class="formulario">Categoría: </label>
                 	<select id="tcat" name="tcat">
-                		<option>SELECCIONE UNA OPCION.....</option>
+                		<option value="0">SELECCIONE UNA OPCION.....</option>
                 		<?php
                 		try{
                 			$consultacat = "select * from tcategoria";
@@ -34,7 +34,7 @@
                 <div>
                 	<label class="formulario">Proveedor: </label>
                 	<select id="tprov" name="tprov">
-                		<option>SELECCIONE UNA OPCION.....</option>
+                		<option value="0">SELECCIONE UNA OPCION.....</option>
                 		<?php
                 		try{
                 			$consultaprov = "select idProveedor, empresa from tproveedor";
@@ -65,7 +65,7 @@
                 	<input type="file" required name="txtimagen" id="txtimagen" class="caja"/>
                 </div>
                 <div>
-                	<input type="button" value="Enviar" class="btn" id="btnRegProducto"/></a>
+                	<input type="button" value="Enviar" class="btn" id="btnRegProducto"/>
                 </div>
 
      </form>
