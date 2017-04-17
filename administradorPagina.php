@@ -26,6 +26,7 @@
         <script src="gestionesjs/Usuarios.js" type="text/javascript"></script>
         <script src="gestionesjs/proveedores.js" type="text/javascript"></script>
         <script src="gestionesjs/Categorias.js" type="text/javascript"></script>
+         <script src="gestionesjs/Productos.js" type="text/javascript"></script>
           
     </head>
 

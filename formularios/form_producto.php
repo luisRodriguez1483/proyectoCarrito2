@@ -1,33 +1,19 @@
-<!DOCTYPE HTML>
-<head>
-<meta charset="utf-8">
-<title>Formulario Producto</title>
-<script src="jquery-3.1.1.min.js"></script>
-<script src="combosdinamicos.js" type="text/javascript"></script>
-
-</head>
-
-<body>
 	<?php
     	include '../conexion.php';
 
     ?>
-	 <form method="post" action="producto.php" class="formulario">
-	 			<div>
-	 				<label class="formulario">Id producto: </label>
-                	<label>hacer la consulta</label>
-	 			</div>
+	 <form class="formulario" id="formularioProducto" enctype="multipart/form-data">
               	<div>
               		<label class="formulario">Nombre del producto: </label>
-                	<input type="text" required name="txtnommbreproducto" class="caja" />
+                	<input type="text" required name="txtnommbreproducto" id="txtnommbreproducto" class="caja" />
               	</div>
               	<div>
               		<label class="formulario">Caracteristicas: </label>
-                	<input type="text" required name="txtcaracteristicas" class="caja" />
+                	<input type="text" required name="txtcaracteristicas" id="txtcaracteristicas" class="caja" />
               	</div>
               	<div>
-              		<label class="formulario">Id categoría: </label>
-                	<select id="tcat">
+              		<label class="formulario">Categoría: </label>
+                	<select id="tcat" name="tcat">
                 		<option>SELECCIONE UNA OPCION.....</option>
                 		<?php
                 		try{
@@ -46,8 +32,8 @@
                 	</select>
               	</div>
                 <div>
-                	<label class="formulario">Id proveedor: </label>
-                	<select id="tprov">
+                	<label class="formulario">Proveedor: </label>
+                	<select id="tprov" name="tprov">
                 		<option>SELECCIONE UNA OPCION.....</option>
                 		<?php
                 		try{
@@ -66,25 +52,21 @@
                 		?>
                 	</select>
                 </div>
-                <div>
-                	<label class="formulario">Precio venta: </label>
-               		<input type="text" required name="txtventa" class="caja"/>
+				<div>
+                	<label class="formulario">Existencias: </label>
+                	<input type="text" required name="txtexistencia" id="txtexistencia" class="caja"/>
                 </div>
-                <div>
+                 <div>
                 	<label class="formulario">Precio compra: </label>
-                	<input type="text" required name="txtcompra" class="caja"/>
+                	<input type="text" required name="txtcompra" id="txtcompra" class="caja"/>
                 </div>
                 <div>
                 	<label class="formulario">Imágen: </label>
-                	<input type="file" required name="txtimagen" class="caja"/>
+                	<input type="file" required name="txtimagen" id="txtimagen" class="caja"/>
                 </div>
                 <div>
-                	<input type="submit" value="Enviar" class="btn" /></a>
+                	<input type="button" value="Enviar" class="btn" id="btnRegProducto"/></a>
                 </div>
 
      </form>
-</body>
 
-<footer>
-
-</footer>

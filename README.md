@@ -3,14 +3,6 @@ Proyecto carrito
 
 Bienvenido a git en este archivo se pondran solo comentarios
 
-Como podrán ver hice una parte del diseño del index, es adaptable y podrán comprobarlo cualquier duda o sugerencia aqui estoy
+NOTA URGENTE:
 
-Añadi el formulario de contacto y una carpeta que se llama fonts junto con sus estilos que es la que hace funcionar los iconitos.
-
-Agregue los iconos a la parte del menú
-
-Hola perros en realidad no es ningpun cambios, es más bien Git en Lunix :).
-
-Cambios en el formulario de clientes
-
-Galeria del index (aún no es dinámica) y pequeño cambio en el menú
+Memo en la parte de imagenes cambie el directorio a donde se va a guardar la imagen vale para que le pongas mucha atencion a esa parte el directorio se llama "ALBUMPRODUCTOS" ahi se guardara todas la imagenes de los productos no te preocupes de cambiar la ruta de tu index eso ya lo hice espero que con eso no te planche cambios de todos modos recuerda siempre hacer pull antes de un push

@@ -70,7 +70,7 @@
         <div class="imagen1 col-4 col-m-6"> 
             <h2><?php echo $foto['Producto']; ?></h2>
             <a href="fotos.php?idProducto=<?php echo $foto['idProducto']; ?>">
-                <img src="images/bd/<?php echo $foto['Imagen'] ?>" alt="<?php echo $foto['Descripcion'] ?>">
+                <img src="albumProductos/<?php echo $foto['Imagen'] ?>" alt="<?php echo $foto['Descripcion'] ?>">
             </a>
             <p><b>$: </b><?php echo $foto['Precio']; ?></p>
             <span class="icon-shopping-cart"></span><input type="submit" value="Comprar">

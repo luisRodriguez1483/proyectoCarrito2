@@ -7,9 +7,9 @@ $(document).ready(function () {
 
     $(document).on('click', '#usuario', function () {
         $('body').pleaseWait();
-        setTimeout(function () {
+        setInterval(function () {
             parar()
-        }, 500);
+        }, 1000);
         $.ajax({
             url: "usuarios.php",
             dataType: 'html',
@@ -48,9 +48,9 @@ $(document).ready(function () {
 
     $(document).on('click', '#proveedores', function () {
         $('body').pleaseWait();
-        setTimeout(function () {
+        setInterval(function () {
             parar()
-        }, 500);
+        }, 1000);
         $.ajax({
             dataType: "html",
             url: "proveedores.php",
@@ -88,9 +88,9 @@ $(document).ready(function () {
 
     $(document).on('click', '#categoria', function () {
         $('body').pleaseWait();
-        setTimeout(function () {
+        setInterval(function () {
             parar()
-        }, 500);
+        }, 1000);
 
         $.ajax({
             dataType: 'html',
@@ -130,7 +130,48 @@ $(document).ready(function () {
 
 
     $(document).on('click', '#producto', function () {
-        alert();
+          $('body').pleaseWait();
+        setInterval(function () {
+            parar()
+        }, 1000);
+
+        $.ajax({
+            dataType: 'html',
+            url: 'producto.php',
+            async: "false",
+            success: function (postMessage) {
+
+                $('#contenido').empty();
+                $('#contenido').html(postMessage);
+                $('#tblProducto').DataTable({
+                    "destroy": true,
+                    "searching": true,
+                    "bPaginate": true,
+                    "bLengthChange": true,
+                    "bFilter": true,
+                    "bSort": true,
+                    "bInfo": true,
+                    "bAutoWidth": true,
+                    "language": {
+                        "sSearch": "Buscar",
+                        "lengthMenu": "Filtrar por _MENU_",
+                        "zeroRecords": "No hay ningun dato que mostrar",
+                        "info": "Pagina _PAGE_ de _PAGES_",
+                        "infoFiltered": "(Total de datos: _MAX_)",
+                        "oPaginate": {
+                            "sFirst": "Primero",
+                            "sLast": "Ultimo",
+                            "sNext": "Siguiente",
+                            "sPrevious": "Anterior",
+                        }
+                    }
+                });
+
+            }
+        });
+        
+        
+        
     });
 
     function parar() {
