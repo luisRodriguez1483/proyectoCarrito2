@@ -20,7 +20,14 @@ try {
         $id = $row['idUsuario'];
         $usuario = $row['Usuario'];
     }
-    if($pass == $password){  
+    if($pass == $password){ 
+
+        if($tipo == "Cliente"){
+            session_start();
+            $_SESSION['idUsuario'] = $id;
+                $_SESSION['Usuario'] = $usuario;
+            echo 5;
+        }else{
             if($status == "Activo"){
                 session_start();
                 $_SESSION['idUsuario'] = $id;
@@ -30,10 +37,13 @@ try {
             }else {
                 echo 3;
             }
+
+        }
         }else {
             echo 2;
         }
     
+        
     }else {
         echo 1;
     }

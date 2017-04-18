@@ -137,37 +137,25 @@ $(document).on('click','#btnActProducto',function(){
         contentType:false,
         processData:false,
         success:function(msgBnd){
+           if(msgBnd == 1){
+               swal({
+                   title:'Exito',
+                   text:'Debe llenar todos lo campos',
+                   type:'success',
+                   showConfirmButton:true
+                },function(){
+                    window.location.reload();
+                });
 
-            alert(msgBnd);
-           /* if(msgBnd == 1){
-               swal('ERROR','Debe llenar todos lo campos','error');
+           }else if(msgBnd == 2){
+                swal('ERROR','Este tipo de archivo no es valido','error');
+           }else {
 
-               }else if(msgBnd == 2){
-                         swal('ERROR','Este tipo de archivo no es valido','error');
-                        
-               }else if(msgBnd == 3){
-                        alert(msgBnd);
-             }else if(msgBnd == 4){
-                    swal({
-                        title:"Exito",
-                        text:"El registro se ha realizado con exito",
-                        type:"success",
-                        showConfirmButton:true
-                    },
-                        function(){
-                            window.location.reload();
-                    });
-             }else{
-                 alert(msgBnd);
-             }*/
-            
+               alert(msgBnd);
+           }
         
         }
     });
-
-
        }
-
-
         });
 });

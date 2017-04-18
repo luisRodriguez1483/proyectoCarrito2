@@ -22,6 +22,8 @@ function iniciarSesion(){
                 swal("ERROR","Lo sentimos su cuenta no esta disponible",'error');
             } else if (bnd == 4) {
                 window.location = "administradorPagina.php";
+            } else if(bnd == 5){
+                    window.location ="indexClientes.view.php";
             } else {
                 alert(bnd);
             }
