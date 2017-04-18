@@ -63,9 +63,12 @@
 						?>
 						<option value="<?php echo $row['idProveedor']; ?>" selected><?php echo utf8_encode($fila['empresa']);?></option>
 
-                        <?php}else{?>
+                        <?php
+						}else{
+						
+						?>
                         
-                        <option value="<?php echo $row['idProveedor']; ?>" ><?php echo utf8_encode($fila['empresa']);?></option>
+                        <option value="<?php echo $row['idProveedor']; ?>"><?php echo utf8_encode($fila['empresa']);?></option>
 
 						<?php
                         }
@@ -80,7 +83,8 @@
 				<div>
                 	<label class="label label-success">Existencias disponibles: <?php echo $row['Existencias']?> </label><br><br>
                     Agregar
-                	<input type="number" required name="txtexistencia" id="txtexistencia" class="caja" min="0" placeholder="Agregar"/>
+                	<input type="number" required name="txtexistencia" id="txtexistencia" class="caja" min="0" value="0" 
+					placeholder="Agregar"/>
                 </div>
                  <div>
                 	<label class="formulario">Precio compra: </label>

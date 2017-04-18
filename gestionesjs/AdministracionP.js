@@ -21,7 +21,8 @@ $(document).ready(function () {
                     "destroy": true,
                     "searching": true,
                     "bPaginate": true,
-                    "bLengthChange": true,
+                    "PageLength":5,
+                    "bLengthChange": false,
                     "bFilter": true,
                     "bSort": true,
                     "bInfo": true,
@@ -59,10 +60,11 @@ $(document).ready(function () {
                 $('#contenido').empty();
                 $('#contenido').html(data);
                 $('#tblProveedor').DataTable({
+                    "pageLength":5,
                     "destroy": true,
                     "searching": true,
                     "bPaginate": true,
-                    "bLengthChange": true,
+                    "bLengthChange": false,
                     "bFilter": true,
                     "bSort": true,
                     "bInfo": true,
@@ -101,10 +103,11 @@ $(document).ready(function () {
                 $('#contenido').empty();
                 $('#contenido').html(postMessage);
                 $('#tblCategorias').DataTable({
+                    "pageLength":5,
                     "destroy": true,
                     "searching": true,
                     "bPaginate": true,
-                    "bLengthChange": true,
+                    "bLengthChange": false,
                     "bFilter": true,
                     "bSort": true,
                     "bInfo": true,
@@ -144,10 +147,11 @@ $(document).ready(function () {
                 $('#contenido').empty();
                 $('#contenido').html(postMessage);
                 $('#tblProducto').DataTable({
+                    "pageLength":5,
                     "destroy": true,
                     "searching": true,
                     "bPaginate": true,
-                    "bLengthChange": true,
+                    "bLengthChange": false,
                     "bFilter": true,
                     "bSort": true,
                     "bInfo": true,

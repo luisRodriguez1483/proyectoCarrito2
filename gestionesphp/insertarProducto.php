@@ -12,7 +12,7 @@ $nombreImagenPro = $_FILES['txtimagen']['name'];
 $ruta = "../albumProductos/".$nombreImagenPro;
 
 if($_FILES['txtimagen']['tmp_name']!=""){
-if($tipoImagenPro == "image/jpeg" || $tipoImagenPro == "image/png"){
+if($tipoImagenPro == "image/jpeg" || $tipoImagenPro == "image/png" || $tipoImagenPro == "image/gif"){
 if(move_uploaded_file($_FILES['txtimagen']['tmp_name'],$ruta) == true){
 try{
     

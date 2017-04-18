@@ -18,7 +18,7 @@
                 <?php
                 include './conexion.php';
                 try {
-                    $query = "SELECT * FROM tusuarios";
+                    $query = "SELECT * FROM tusuarios WHERE Tipo = 'Administrador' OR Tipo ='Secretaria'";
                     
                     $execute = $conexion->query($query);  
                     $rs = $execute->fetchAll();
