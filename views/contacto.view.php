@@ -34,22 +34,15 @@
     <article class="formulario">
         <h1>Formulario de Contacto</h1>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+        <span class="icon-user mail"><label for="nombre">Nombre:</label></span>
+        <input type="text" name="nombre" placeholder"Escribe tu nombre:" /><br><br>
         <span class="icon-at2 mail"><label for="correo">E-mail:</label></span>
-        <input type="text" name="correo" placeholder"Aqui va tu correo electrónico" /><br><br><br>
+        <input type="email" name="correo" placeholder"Aqui va tu correo electrónico" /><br><br>
         <span class="icon-comment3 mail"><label for="asunto">Asunto:</label></span>
-        <input type="text" name="asunto" placeholder"Asunto" /><br><br><br>
+        <input type="text" name="asunto" placeholder"Asunto" /><br><br>
         <span class="icon-envelop mail"><label for="mensaje">Mensaje:</label></span><br>
         <textarea name="mensaje"></textarea><br><br><br>
         <input type="submit" name="btnCorreo" value="Enviar Correo" class="submit">
-        <p>
-        <?php
-        if(!$correo->Send()) {
-  echo "Hubo un error: " . $correo->ErrorInfo;
-} else {
-  echo "Mensaje enviado con exito.";
-}
-?>
-        </p>
         </form>
     </article>
     </div>
