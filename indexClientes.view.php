@@ -122,7 +122,7 @@ $categorias = $consulta->fetchAll();
         <nav class="categorias col-3 col-m-4">
         <ul>
             <?php foreach($categorias as $categoria): ?>
-            <li><a href="#"><?php echo $categoria['Categoria']; ?></a></li>
+            <li><a href="listacategorias.php?idCategoria=<?php echo $categoria['idCategoria']; ?>"><?php echo $categoria['Categoria']; ?></a></li>
             <?php endforeach; ?>
         </ul>
     </nav> 
