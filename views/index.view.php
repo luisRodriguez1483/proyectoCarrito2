@@ -33,6 +33,7 @@
             <li class="col-2"><a href="contacto.php"><span class="icon-mail5">Contacto</span></a></li>
         </ul>
     </header>
+    <!--
     <div class="buscador">
         <input type="text" name="buscador" id="buscador" placeholder="Busca tu producto:">
     </div>
@@ -40,7 +41,7 @@
         <ul>
             <li></li>
         </ul>
-    </div>
+    </div>-->
     <div class="slideshow-container">
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
