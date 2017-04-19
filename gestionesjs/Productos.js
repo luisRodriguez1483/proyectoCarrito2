@@ -140,7 +140,7 @@ $(document).on('click','#btnActProducto',function(){
            if(msgBnd == 1){
                swal({
                    title:'Exito',
-                   text:'Debe llenar todos lo campos',
+                   text:'El producto se ha actualizado con exito',
                    type:'success',
                    showConfirmButton:true
                 },function(){
@@ -158,4 +158,43 @@ $(document).on('click','#btnActProducto',function(){
     });
        }
         });
+});
+$(document).on('click','#removeProducto',function(){
+    var id = $(this).parents("tr").find("td").eq(0).html();
+  
+    
+    swal({
+
+            title: "¿Seguro que desea continuar con esta accion?",
+            text: "No podras deshacer estos cambios",
+            type: "warning",
+            showCancelButton: true,
+            cancelButtonText: "Cancelar",
+            showConfirmButton: true,
+            confirmButtonText: "Confirmar",
+            closeOnConfirm: false
+        },function(){
+$.ajax({
+    type:'POST',
+    url:'./gestionesphp/eliminarProducto.php',
+    data:{id:id},
+    success:function(bnd){
+            if(bnd == 1){
+            swal({
+                   title:'Exito',
+                   text:'El producto se ha eliminado con exito',
+                   type:'success',
+                   showConfirmButton:true
+                },function(){
+                    window.location.reload();
+                });
+            }else{
+                alert(bnd);
+            }
+    }
+});
+
+        });
+
+
 });

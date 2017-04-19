@@ -49,11 +49,29 @@ swal("ERROR","Por favor veifique que si correo sea correcto",'error');
             estado:estado,
             mun:mun,
             col:col,
+            cp:cp,
             tipo:tipo,
             status:status
         },
         success:function(msgRespuesta){
-alert(msgRespuesta);
+if(msgRespuesta == 1){
+swal('ERROR','Este usuario ya esta registrado por favor ingresa otro','error');
+
+}else if(msgRespuesta == 2){
+swal('ERROR',"Este correo ya esta registrado por favor ingresa otro",'error');
+}else if(msgRespuesta == 3){
+    swal({
+        title:'Exito',
+        text:'Los datos fueron registrados con exito ahora puedes iniciar sesion',
+        type:'success',
+        showConfirmButton:true},
+        function(){
+
+            window.location.href="../login.php";
+    });
+}
+
+
         }
     });
 }
