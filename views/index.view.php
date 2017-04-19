@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="../views/jquery.js"></script>
     <link href="css/styleindex.css" rel="stylesheet">
     <link rel="stylesheet" href="fonts/style.css">
 </head>
@@ -32,6 +33,14 @@
             <li class="col-2"><a href="contacto.php"><span class="icon-mail5">Contacto</span></a></li>
         </ul>
     </header>
+    <div class="buscador">
+        <input type="text" name="buscador" id="buscador" placeholder="Busca tu producto:">
+    </div>
+    <div class="resultado" id="resultado">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
     <div class="slideshow-container">
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>

@@ -325,6 +325,7 @@ body {
 .imagen1 img {
     border: 3px solid lightgreen;
     width: 65%;
+    height: auto;
     white-space: pre-line;
     vertical-align: text-top;
 }
@@ -417,6 +418,24 @@ body {
     height: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+}
+
+
+/*Estilos para el buscador*/
+
+.buscador {}
+
+.buscador input {
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+}
+
+.resultado ul li {
+    list-style-type: none;
 }
 
 
