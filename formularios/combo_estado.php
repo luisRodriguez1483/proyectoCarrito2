@@ -1,4 +1,4 @@
-<option>SELECCIONE UNA OPCION.....</option>
+<option value="0">SELECCIONE UNA OPCION.....</option>
                 		<?php
                 		try{
                 		$consulta = "select * from testado";

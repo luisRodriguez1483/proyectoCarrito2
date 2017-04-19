@@ -1,11 +1,12 @@
+/*INICIAR COMBOS PARA CLIENTES*/
 	$(document).on('change', '#testadocli', function(){
 
-		var idestadocli = $('#testadocli').val();
+		var idEstado = $('#testadocli').val();
 
 	$.ajax({
-		url:"combo_municipio.php",
+		url:"../formularios/combo_municipio.php",
 		type:"POST",
-		data:{idestadocli:idestadocli},
+		data:{idEstado:idEstado},
 		success: function(idmunicipio){
 			$('#tmunicipiocli').html(idmunicipio);
 		}
@@ -17,12 +18,12 @@
 
 	$(document).on('change', '#tmunicipiocli', function(){
 
-		var idmunicipiocli = $('#tmunicipiocli').val();
+		var idMunicipio = $('#tmunicipiocli').val();
 
 	$.ajax({
-		url:"combo_colonia.php",
+		url:"../formularios/combo_colonia.php",
 		type:"POST",
-		data:{idmunicipiocli:idmunicipiocli},
+		data:{idMunicipio:idMunicipio},
 		success: function (idcolonia) {
 		  	$('#tcoloniacli').html(idcolonia);
 		}
@@ -33,19 +34,19 @@
 
 	$(document).on('change', '#tcoloniacli', function(){
 
-		var idcoloniacli = $('#tcoloniacli').val();
+		var idCol = $('#tcoloniacli').val();
 
 	$.ajax({
-		url:"combo_cp.php",
+		url:"../formularios/combo_cp.php",
 		type:"POST",
-		data:{idcoloniacli:idcoloniacli},
+		data:{idCol:idCol},
 		success: function (idcp) {
 		  $('#tcpcli').html(idcp);
 		}
 	});
 	});
 
-
+/*TERMINA COMBOS DINAMICOS DE CLIENTE*/
 	$(document).on('change', '#testadoprov', function(){
 
 		var idestadoprov = $('#testadoprov').val();
