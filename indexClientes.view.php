@@ -79,13 +79,13 @@ $categorias = $consulta->fetchAll();
         </li>
         <li class="col-2 col-m-12"><a href="">Envíos y Devoluciones</a></li>
         <li class="col-2 col-m-12"><a href="">Búsqueda Avanzada</a></li>
-        <li class="col-2 col-m-12"><span class="icon-shopping-cart"> </span><a href=""> Mi carrito</a></li>
+        <li class="col-2 col-m-12"><span class="icon-shopping-cart"> </span><a href="productosAgregados.php"> Mi carrito</a></li>
         <li class="col-2 col-m-12"><span class="glyphicon glyphicon-log-out"></span> <a style="cursor:pointer" id="btnCliSalir"> Salir</a></li>
         <li class="col-2 col-m-12"><a href="#"><?php echo "Bienvenido ".$_SESSION['Usuario']?></a></li>
     </ul>
     <header class="menu">
         <ul>
-            <li class="col-2"><a href="index.php"><span class="icon-home4">Inicio</span></a></li>
+            <li class="col-2"><a href="indexClientes.view.php"><span class="icon-home4">Inicio</span></a></li>
             <li class="col-2"><a href=""><span class="icon-star2">Destacados</span></a></li>
             <li class="col-2"><a href=""><span class="icon-trophy3">Más vendidos</span></a></li>
             <li class="col-2"><a href=""><span class="icon-price-tag">Ofertas</span></a></li>
@@ -130,7 +130,7 @@ $categorias = $consulta->fetchAll();
         <?php foreach($fotos as $foto):?>
         <div class="imagen1 col-4 col-m-6"> 
             <h2><?php echo $foto['Producto']; ?></h2>
-            <a href="fotos.php?idProducto=<?php echo $foto['idProducto']; ?>">
+            <a href="fotos.cliente.php?idProducto=<?php echo $foto['idProducto']; ?>">
                 <img src="albumProductos/<?php echo $foto['Imagen'] ?>" alt="<?php echo $foto['Descripcion'] ?>">
             </a>
             <p><b>$: </b><?php echo $foto['Precio']; ?></p>

@@ -12,7 +12,8 @@ echo 1;
 try{
 $querySELECT = "SELECT * FROM tproducto WHERE idProducto=:id";
 $s = $conexion->prepare($querySELECT);
-$rs = $s->execute(array('id'=>$idProducto));
+$s->execute(array('id'=>$idProducto));
+$rs = $s->fetchAll();
 foreach($rs as $row ){
 $nomProducto = $row['Producto'];
 $precio = $row['Precio'];
@@ -21,11 +22,12 @@ $subtotal = $precio * $cantidad;
 //Si es el primer producto
 if(empty($_SESSION['carrito'])){
 $_SESSION['carrito'] = array(array('id'=>$idProducto,'nomPro'=>$nomProducto,'cantidad'=>$cantidad,'precio'=>$precio,'subtotal'=>$subtotal));
-
+echo 2;
 }else {
  $carro = $_SESSION['carrito'];
-            array_push($carro,array('id'=>$id,'nomPro'=>$nomProducto,'cantidad'=>$cantidad,'pventa'=>$pventa,'subtotal'=>$subtotal));
+            array_push($carro,array('id'=>$idProducto,'nomPro'=>$nomProducto,'cantidad'=>$cantidad,'precio'=>$precio,'subtotal'=>$subtotal));
             $_SESSION['carrito']=$carro;
+            echo 2;
 }
 }catch(Exception $ex){
 echo "ERROR EN LA CONSULTA ".$ex->getMessage();

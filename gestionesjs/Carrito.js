@@ -20,6 +20,17 @@ $.ajax({
         window.location.href = './formularios/form_cliente.php';
             });
 
+        }else if(msgBandera == 2){
+                swal({
+                title:'Exito',
+                text:'El producto se ha agregado a tu carrito',
+                type:'success',
+                showConfirmButton:true},
+                function(){
+        window.location.href = './indexClientes.view.php';
+            });
+        }else {
+            alert(msgBandera);
         }
     }
 });
