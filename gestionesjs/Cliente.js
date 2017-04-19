@@ -9,3 +9,7 @@ $.ajax({
     }
 });
 });
+
+$(document).on('click','#btnRegCliente',function(){
+alert("funciona boton");
+});

@@ -2,9 +2,7 @@
 <head>
 <meta charset="utf-8">
 <title>Registro de Clientes</title>
-<script src="jquery-3.1.1.min.js" type="text/javascript"></script>
-<script src="combosdinamicos.js" type="text/javascript"></script>
-
+<script src="./gestionesjs/Cliente.js" type="text/javascript"></script>
 <!--<link rel="stylesheet" type="text/css" href="estilosform.css"/>-->
 <link href="../css/styleindex.css" rel="stylesheet">
     <link rel="stylesheet" href="../fonts/style.css">
@@ -39,22 +37,20 @@
     </header>
 	<article class="formulario">
 	<h1>Registro de Clientes</h1><br>
-	 <form method="post" action="cliente.php" class="formulario">
+	 <form class="formulario">
 
 
               		<span class="icon-user3 mail"><label>Nombre: </label></span>
-                	<input type="text" required name="txtcliente" class="incliente" placeholder="Nombre Apellido"/><br><br>
+                	<input type="text" required name="txtcliente" class="incliente" placeholder="Nombre Apellido:"/><br><br>
 
-					<span class="icon-user3 mail"><label>Nombre: </label></span>
-                	<input type="text" required name="txtusuario" class="incliente" placeholder="Usuario"/><br><br>
-
+					<span class="icon-user3 mail"><label>Usuario: </label></span>
+                	<input type="text" required name="txtusuario" class="incliente" placeholder="Usuario:"/><br><br>
 
 					<span class="icon-user3 mail"><label>Password: </label></span>
-                	<input type="password" required name="txtpass" class="incliente" placeholder="Password"/><br><br>
-
+                	<input type="password" required name="txtpass" class="incliente" placeholder="Password:"/><br><br>
 
 					<span class="icon-user3 mail"><label>Confirmar contraseña: </label></span>
-                	<input type="password" required name="txtconfpass" class="incliente" placeholder="Confirme password"/><br><br>
+                	<input type="password" required name="txtconfpass" class="incliente" placeholder="Confirme password:"/><br><br>
 
               		<span class="icon-phone3 mail"><label>Teléfono fijo: </label></span>
                 	<input type="tel" required name="txttelefono" class="" maxlength="8" placeholder="Número:"/><br><br>
@@ -67,7 +63,7 @@
 
               		<span class="icon-question2 mail"><label>Estado: </label></span>
                 	<select id="testadocli" class="select">
-                		<
+                	
                 		<?php
                 		include 'combo_estado.php';
                 		?>
@@ -89,7 +85,7 @@
                 		<option>SELECCIONE UNA OPCION.....</option>
 
                 	</select><br><br><br><br>
-                	<input type="submit" value="Enviar" class="submit" />
+                	<input type="button" value="Enviar" class="submit" id="btnRegCliente" />
      </form>
 	 </article>
      </div>
