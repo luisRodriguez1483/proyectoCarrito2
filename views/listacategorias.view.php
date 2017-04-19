@@ -60,19 +60,20 @@
     <div class="catprod">
         <nav class="categorias col-3 col-m-4">
         <ul>
-            <?php foreach($categorias as $categoria): ?>
-            <li><a href="listacategorias.php?idCategoria=<?php echo $categoria['idCategoria']; ?>"><?php echo $categoria['Categoria']; ?></a></li>
+            <?php foreach($categorias as $cat): ?>
+            <li><a href="listacategorias.php?idCategoria=<?php echo $cat['idCategoria']; ?>"><?php echo $cat['Categoria']; ?></a></li>
             <?php endforeach; ?>
         </ul>
     </nav> 
     <article class="imagenes col-9 col-m-8">
-        <?php foreach($categoria as $cat):?>
+    
+        <?php foreach($categoria as $cate):?>
         <div class="imagen1 col-4 col-m-6"> 
-            <h2><?php echo $cat['Producto']; ?></h2>
+            <h2><?php echo $cate['Producto']; ?></h2>
             <a href="fotos.php?idProducto=<?php echo $foto['idProducto']; ?>">
-                <img src="albumProductos/<?php echo $cat['Imagen'] ?>" alt="<?php echo $cat['Descripcion'] ?>">
+                <img src="albumProductos/<?php echo $cate['Imagen'] ?>" alt="<?php echo $cate['Descripcion'] ?>">
             </a>
-            <p><b>$: </b><?php echo $cat['Precio']; ?></p>
+            <p><b>$: </b><?php echo $cate['Precio']; ?></p>
             <span class="icon-shopping-cart"></span><input type="submit" value="Comprar">
             </div>
         <?php endforeach;?> 
