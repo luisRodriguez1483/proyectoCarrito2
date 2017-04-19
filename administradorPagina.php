@@ -21,12 +21,18 @@
         <link rel="stylesheet" type="text/css" href="css/sweetalert.css"/>
         <link rel="stylesheet" type="text/css" href="css/estilosform.css"/>
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
+        <!--<link href="css/estilo.css" rel="stylesheet">-->
 
         <script src="gestionesjs/AdministracionP.js" type="text/javascript"></script>
         <script src="gestionesjs/Usuarios.js" type="text/javascript"></script>
         <script src="gestionesjs/proveedores.js" type="text/javascript"></script>
         <script src="gestionesjs/Categorias.js" type="text/javascript"></script>
          <script src="gestionesjs/Productos.js" type="text/javascript"></script>
+         <script src="js/myjava.js"></script>
+
+
+
+
           
     </head>
 

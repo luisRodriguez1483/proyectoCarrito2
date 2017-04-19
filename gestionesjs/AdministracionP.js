@@ -181,4 +181,18 @@ $(document).ready(function () {
     function parar() {
         $('body').pleaseWait('stop');
     }
+
+$(document).on('click','#slider',function(){
+    $.ajax({
+        dataType:'html',
+        url:'./vistas/slider.php',
+        async:"false",
+        success:function(data){
+            $('#contenido').empty();
+            $('#contenido').html(data);
+        }
+
+    });
+});
+
 });
