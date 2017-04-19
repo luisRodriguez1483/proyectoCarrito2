@@ -41,34 +41,35 @@
 	<h1>Registro de Clientes</h1><br>
 	 <form method="post" action="cliente.php" class="formulario">
 
-              		<span class="icon-user3 mail"><label>Cliente:</label></span>
-                	<input type="text" required name="txtcliente" class="incliente" placeholder="Nombre:"/><br><br>
+
+              		<span class="icon-user3 mail"><label>Nombre: </label></span>
+                	<input type="text" required name="txtcliente" class="incliente" placeholder="Nombre Apellido"/><br><br>
+
+					<span class="icon-user3 mail"><label>Nombre: </label></span>
+                	<input type="text" required name="txtusuario" class="incliente" placeholder="Usuario"/><br><br>
+
+
+					<span class="icon-user3 mail"><label>Password: </label></span>
+                	<input type="password" required name="txtpass" class="incliente" placeholder="Password"/><br><br>
+
+
+					<span class="icon-user3 mail"><label>Confirmar contraseña: </label></span>
+                	<input type="password" required name="txtconfpass" class="incliente" placeholder="Confirme password"/><br><br>
 
               		<span class="icon-phone3 mail"><label>Teléfono fijo: </label></span>
-                	<input type="tel" required name="txttelefono" class="" placeholder="Número:"/><br><br>
+                	<input type="tel" required name="txttelefono" class="" maxlength="8" placeholder="Número:"/><br><br>
 
               		<span class="icon-mobile3 mail"><label>Teléfono Celular: </label></span>
-                	<input type="tel" required name="txttelefonocelular" class="" placeholder="Número:"/><br><br>
+                	<input type="tel" required name="txttelefonocelular" class="" maxlength="10" placeholder="Número:"/><br><br>
 
               		<span class="icon-at2 mail"><label>Correo electrónico: </label></span>
                 	<input type="email" required name="txtcorreo" class="" placeholder="E-mail:"/><br><br>
 
               		<span class="icon-question2 mail"><label>Estado: </label></span>
                 	<select id="testadocli" class="select">
-                		<option>SELECCIONE UNA OPCION.....</option>
+                		<
                 		<?php
-                		try{
-                		$consulta = "select * from testado";
-						$var = $conexion->query($consulta);
-						$jaja = $var->fetchAll();
-						foreach ($jaja as $fila) {
-                		?>
-                		<option value="<?php echo $fila['idEstado']; ?>"><?php echo utf8_encode($fila['Estado']);?></option>
-                		<?php
-						}
-                		}catch(Exception $error){
-								echo "ERROR DE CONSULTA ".$error->getMessage();
-						}
+                		include 'combo_estado.php';
                 		?>
                 	</select><br><br>
               		<span class="icon-question2 mail"><label>Municipio: </label></span>
