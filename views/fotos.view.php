@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery.js" type="text/javascript"></script>
+     <script src="js/sweetalert.min.js" type="text/javascript"></script>
+    <script src="gestionesjs/Carrito.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css"/>
     <link href="css/styleindex.css" rel="stylesheet">
     <link rel="stylesheet" href="fonts/style.css">
     <title>Contactanos</title>
@@ -40,11 +44,18 @@
         ?>
         </h1>
         <div class="foto">
+        
             <img src="albumProductos/<?php echo $foto['Imagen']; ?>" alt=""><br>
             <p><b>Descripción:</b> <?php echo $foto['Descripcion']; ?></p><br>
             <p><b>Costo: $ </b><?php echo $foto['Precio']; ?></p>
-            <input type="submit" value="Comprar"><br>
-            <a href="index.php"><span class="icon-arrow-left-alt1"></span> Regresar</a>
+
+<form class="form">
+<label>Cantidad: <label>
+<input type="number" id="cantidad" min="0" value="0"/><br><br>
+<input type="hidden" value="<?php echo $foto['idProducto']?>" id="idProducto"/>
+<input type="button" value="Comprar" id="btnAgregarACarrito">
+</form><br>
+  <a href="index.php"><span class="icon-arrow-left-alt1"></span> Regresar</a>
         </div>
     </article>
     </div>
