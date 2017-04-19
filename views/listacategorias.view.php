@@ -70,7 +70,7 @@
         <?php foreach($categoria as $cate):?>
         <div class="imagen1 col-4 col-m-6"> 
             <h2><?php echo $cate['Producto']; ?></h2>
-            <a href="fotos.php?idProducto=<?php echo $foto['idProducto']; ?>">
+            <a href="fotos.php?idProducto=<?php echo $cate['idProducto']; ?>">
                 <img src="albumProductos/<?php echo $cate['Imagen'] ?>" alt="<?php echo $cate['Descripcion'] ?>">
             </a>
             <p><b>$: </b><?php echo $cate['Precio']; ?></p>

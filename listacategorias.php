@@ -10,6 +10,11 @@ $consulta->execute();
 
 $categorias = $consulta->fetchAll();
 
+ $fotos_por_pagina = 6;
+
+    $pagina_actual = (isset($_GET['p']) ? (int)$_GET['p'] : 1);
+    $inicio = ($pagina_actual > 1) ? $pagina_actual * $fotos_por_pagina - $fotos_por_pagina : 0;
+
 if(!$conexion){
     die();
 }
@@ -28,6 +33,12 @@ $categoria=$statement->fetchAll();
 if(!$categoria){
     header('Location: index.php');
 }
+
+    $filas = $conexion->prepare("SELECT FOUND_ROWS() as total_filas");
+    $filas->execute();
+    $total_post = $filas->fetch()['total_filas'];
+
+    $total_paginas = ceil($total_post / $fotos_por_pagina);
 
 include 'views/listacategorias.view.php';
 
